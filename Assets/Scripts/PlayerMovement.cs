@@ -65,23 +65,22 @@ public class PlayerMovement : MonoBehaviour
     {
         MovePlayer();
     }
-    
-    
+
+
     private void MyInput()
     {
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
 
-        //when to jump
-        if(Input.GetKey(jumpKey) && readyToJump && grounded)
+        // Only allow jumping if the player is grounded and ready to jump
+        if (grounded && readyToJump && Input.GetKey(jumpKey))
         {
             readyToJump = false;
-
             Jump();
-
             Invoke(nameof(ResetJump), jumpCooldown);
         }
     }
+
 
     private void MovePlayer()
     {
