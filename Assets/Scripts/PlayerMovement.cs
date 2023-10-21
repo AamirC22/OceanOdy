@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public float groundDrag;
 
     public float jumpForce;
-    public float jumpCooldown;
+    public float jumpCooldown = 1;
     public float airMultiplier;
     bool readyToJump;
 
