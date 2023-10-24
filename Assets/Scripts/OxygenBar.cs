@@ -1,10 +1,11 @@
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class OxygenBar : MonoBehaviour
 {
-    private int OxygenLevel = 200;
+    private int OxygenLevel = 10;
     public TextMeshProUGUI OxygenBarText;
     public LayerMask waterLayer;
     private GameObject player;
@@ -42,7 +43,6 @@ public class OxygenBar : MonoBehaviour
             Debug.Log("Oxygen Level: " + OxygenLevel); // Debug statement to track the OxygenLevel
             yield return new WaitForSecondsRealtime(1f);
         }
-
-        OxygenBarText.text = "Oxygen: " + OxygenLevel.ToString("D3");
+            SceneManager.LoadScene("OxygenDepleted");
     }
 }
