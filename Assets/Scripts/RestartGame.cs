@@ -12,6 +12,6 @@ public class RestartGame : MonoBehaviour
     }
     public void RestartTheGame()
     {
-        SceneManager.LoadScene("dummy");
+        SceneManager.LoadScene("Platform1");
     }
 }
