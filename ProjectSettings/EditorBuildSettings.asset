@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: b05874fce6884424abcbfa4cab17590f
   - enabled: 1
-    path: Assets/Scenes/dummy.unity
+    path: Assets/Scenes/Platform1.unity
     guid: 5cb6bb663637e1943898ca4d67bd28b2
   - enabled: 1
     path: Assets/Scenes/OxygenDepleted.unity
