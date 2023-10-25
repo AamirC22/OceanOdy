@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class OxygenBar : MonoBehaviour
 {
-    private int OxygenLevel = 10;
+    private int OxygenLevel = 5;
     public TextMeshProUGUI OxygenBarText;
     public LayerMask waterLayer;
     private GameObject player;
