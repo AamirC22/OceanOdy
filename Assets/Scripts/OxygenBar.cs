@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class OxygenBar : MonoBehaviour
 {
-    private int OxygenLevel = 500;
+    private int OxygenLevel = 1000;
     public TextMeshProUGUI OxygenBarText;
     public LayerMask waterLayer;
     private GameObject player;
@@ -25,14 +25,14 @@ public class OxygenBar : MonoBehaviour
 
     IEnumerator DecreaseOxygen()
     {
-        OxygenBarText.text = "Oxygen: " + OxygenLevel.ToString("D3");
+        OxygenBarText.text = "Oxygen: " + OxygenLevel;
         while (OxygenLevel > 0)
         {
             Vector3 playerPosition = player.transform.position + Vector3.up * 0.1f;
 
             if (playerPosition.y < 30)
             {
-                OxygenBarText.text = "Oxygen: " + OxygenLevel.ToString("D3");
+                OxygenBarText.text = "Oxygen: " + OxygenLevel;
                 OxygenLevel -= 1;
             }
             else
@@ -40,7 +40,7 @@ public class OxygenBar : MonoBehaviour
                 // Player is not in the water layer, you can handle this case if needed
             }
 
-            Debug.Log("Oxygen Level: " + OxygenLevel); // Debug statement to track the OxygenLevel
+            //Debug.Log("Oxygen Level: " + OxygenLevel); // Debug statement to track the OxygenLevel
             yield return new WaitForSecondsRealtime(1f);
         }
             SceneManager.LoadScene("OxygenDepleted");

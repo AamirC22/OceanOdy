@@ -5,22 +5,25 @@ using UnityEngine;
 
 public class StickToPlatform : MonoBehaviour
 {
-    public GameObject Player;
-    private void OnTriggerEnter(Collider other)
+    public GameObject playerObject;
+    public GameObject platformObject;
+
+    void OnTriggerEnter(Collider collider)
     {
-        if (other.gameObject == Player)
+        if (collider.CompareTag("Gamer"))
         {
-            Player.transform.parent = transform;
-            Debug.Log("Player entered trigger zone.");
+            //set playerObject as child of parentObject
+            playerObject.transform.parent = platformObject.transform;
+            UnityEngine.Debug.Log("Gamer collided with Horizontal Cube");
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    void OnTriggerExit(Collider collider)
     {
-        if (other.gameObject == Player)
+        if (collider.CompareTag("Gamer"))
         {
-            Player.transform.parent = null;
-            Debug.Log("Player exited trigger zone.");
+            playerObject.transform.parent = null;
+            UnityEngine.Debug.Log("Gamer stopped colliding");
         }
     }
 }
