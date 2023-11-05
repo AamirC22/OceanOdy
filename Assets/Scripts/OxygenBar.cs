@@ -40,7 +40,7 @@ public class OxygenBar : MonoBehaviour
                 // Player is not in the water layer, you can handle this case if needed
             }
 
-            Debug.Log("Oxygen Level: " + OxygenLevel); // Debug statement to track the OxygenLevel
+            //Debug.Log("Oxygen Level: " + OxygenLevel); // Debug statement to track the OxygenLevel
             yield return new WaitForSecondsRealtime(1f);
         }
             SceneManager.LoadScene("OxygenDepleted");

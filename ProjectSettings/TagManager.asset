@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Gamer
   - DisappearingCube
+  - HorizontalCube
   layers:
   - Default
   - TransparentFX
