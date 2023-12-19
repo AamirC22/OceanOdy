@@ -4,25 +4,36 @@ using UnityEngine;
 
 public class SharkChase : MonoBehaviour
 {
-    public float speed = 5.0f; // Speed at which the shark moves
+    public float speed = 5.0f; // Speed at which the shark moves in the orbit
+    public float orbitDistance = 20.0f; // The radius of the orbit
+    public float orbitDegreesPerSec = 30.0f; // The speed of the orbit in degrees per second
+    public Vector3 orbitPoint; // The point around which the shark will orbit
 
-    private GameObject player; // To hold the reference to the player
+    private Vector3 previousPosition; // To store the position from the previous frame
 
     void Start()
     {
-        // Find the player GameObject by tag
-        player = GameObject.FindGameObjectWithTag("Gamer");
+        // Initialize the shark's position on the orbit
+        previousPosition = transform.position;
     }
 
     void Update()
     {
-        if (player != null)
-        {
-            // Look at the player
-            transform.LookAt(player.transform);
+        // Calculate the next position in the orbit
+        Vector3 newPosition = orbitPoint + (Quaternion.Euler(0, orbitDegreesPerSec * Time.deltaTime, 0) * (transform.position - orbitPoint).normalized) * orbitDistance;
 
-            // Move towards the player
-            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+        // Move the shark to the new position
+        transform.position = newPosition;
+
+        // Look in the direction of the movement
+        Vector3 movementDirection = (newPosition - previousPosition).normalized;
+        if (movementDirection != Vector3.zero)
+        {
+            Quaternion toRotation = Quaternion.LookRotation(movementDirection);
+            transform.rotation = Quaternion.Lerp(transform.rotation, toRotation, speed * Time.deltaTime);
         }
+
+        // Update previousPosition for the next frame
+        previousPosition = newPosition;
     }
 }
