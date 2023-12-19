@@ -4,36 +4,88 @@ using UnityEngine;
 
 public class SharkChase : MonoBehaviour
 {
-    public float speed = 5.0f; // Speed at which the shark moves in the orbit
-    public float orbitDistance = 20.0f; // The radius of the orbit
-    public float orbitDegreesPerSec = 30.0f; // The speed of the orbit in degrees per second
-    public Vector3 orbitPoint; // The point around which the shark will orbit
+    public float chaseSpeed = 5f;
+    public float chaseTriggerDistance = 10f;
+    // Removed the startPosition from Inspector as it's now hardcoded in Start
 
-    private Vector3 previousPosition; // To store the position from the previous frame
+    private GameObject player;
+    private bool isChasing;
+    private Vector3 originalPosition; // To remember the original start position
 
     void Start()
     {
-        // Initialize the shark's position on the orbit
-        previousPosition = transform.position;
+        player = GameObject.FindGameObjectWithTag("Gamer");
+        isChasing = false;
+
+        // Hardcoded start position based on the parent's world position
+        originalPosition = transform.parent.position + new Vector3(228.5f, 74.25999f, -303.6802f);
+
+        // Move the shark to the start position at the beginning of the game
+        transform.position = originalPosition;
     }
 
     void Update()
     {
-        // Calculate the next position in the orbit
-        Vector3 newPosition = orbitPoint + (Quaternion.Euler(0, orbitDegreesPerSec * Time.deltaTime, 0) * (transform.position - orbitPoint).normalized) * orbitDistance;
+        if (player == null) return;
 
-        // Move the shark to the new position
-        transform.position = newPosition;
+        // Measure the distance from the player to the shark's original position (cave)
+        float distanceToPlayerFromOriginalPosition = Vector3.Distance(player.transform.position, originalPosition);
 
-        // Look in the direction of the movement
-        Vector3 movementDirection = (newPosition - previousPosition).normalized;
-        if (movementDirection != Vector3.zero)
+        if (distanceToPlayerFromOriginalPosition <= chaseTriggerDistance)
         {
-            Quaternion toRotation = Quaternion.LookRotation(movementDirection);
-            transform.rotation = Quaternion.Lerp(transform.rotation, toRotation, speed * Time.deltaTime);
+            isChasing = true;
+        }
+        else
+        {
+            isChasing = false;
         }
 
-        // Update previousPosition for the next frame
-        previousPosition = newPosition;
+        if (isChasing)
+        {
+            // Only chase if the shark is not already at the player's position to prevent overshooting
+            if ((transform.position - player.transform.position).sqrMagnitude > 0.1f)
+            {
+                MoveTowards(player.transform.position);
+            }
+            else
+            {
+                // If the shark is very close to the player, it can stop moving and just turn to face the player
+                LookAtLastKnownPlayerPosition();
+            }
+        }
+        else
+        {
+            // When not chasing, return to the original position
+            if ((transform.position - originalPosition).sqrMagnitude > 0.1f)
+            {
+                MoveTowards(originalPosition);
+            }
+            else
+            {
+                LookAtLastKnownPlayerPosition();
+            }
+        }
+    }
+
+    void LookAtLastKnownPlayerPosition()
+    {
+        Vector3 directionToPlayer = (player.transform.position - transform.position).normalized;
+        if (directionToPlayer != Vector3.zero)
+        {
+            Quaternion lookRotation = Quaternion.LookRotation(directionToPlayer);
+            // Rotate over time based on chaseSpeed to make it smooth
+            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * chaseSpeed);
+        }
+    }
+
+    void MoveTowards(Vector3 target)
+    {
+        transform.position = Vector3.MoveTowards(transform.position, target, chaseSpeed * Time.deltaTime);
+
+        Vector3 direction = (target - transform.position).normalized;
+        if (direction != Vector3.zero)
+        {
+            transform.rotation = Quaternion.LookRotation(direction);
+        }
     }
 }

@@ -30,7 +30,7 @@ public class FallingPlatform : MonoBehaviour
             downSpeed += Time.deltaTime / 20;
             transform.position = new Vector3(transform.position.x, transform.position.y - downSpeed, transform.position.z);
 
-            if (transform.position.y < originalPosition.y - 10.0f) // Adjust -2.0f to your desired falling distance.
+            if (transform.position.y < originalPosition.y - 50.0f) // Adjust -2.0f to your desired falling distance.
             {
                 isFalling = false;
                 downSpeed = 0;
