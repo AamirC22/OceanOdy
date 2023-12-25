@@ -7,6 +7,9 @@ TagManager:
   - Gamer
   - DisappearingCube
   - HorizontalCube
+  - Teleporter
+  - Teleporter1
+  - Teleporter2
   layers:
   - Default
   - TransparentFX
