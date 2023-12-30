@@ -1541,7 +1541,8 @@ MonoBehaviour:
   waypoints:
   - {fileID: 934965006}
   - {fileID: 93149345}
-  knockbackStrength: 150
+  knockbackStrength: 300
+  playerHealthBar: {fileID: 356955067}
 --- !u!54 &255290298
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2632,7 +2633,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c2f8b37ce65e14bb6ec28e69c05265, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthBarText: {fileID: 0}
+  HealthBarText: {fileID: 1956188013}
 --- !u!1 &369408761
 GameObject:
   m_ObjectHideFlags: 0
@@ -15270,7 +15271,8 @@ MonoBehaviour:
   waypoints:
   - {fileID: 548868613}
   - {fileID: 2124057382}
-  knockbackStrength: 150
+  knockbackStrength: 300
+  playerHealthBar: {fileID: 356955067}
 --- !u!65 &1867930892
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15854,7 +15856,8 @@ MonoBehaviour:
   waypoints:
   - {fileID: 722026861}
   - {fileID: 1093225438}
-  knockbackStrength: 150
+  knockbackStrength: 300
+  playerHealthBar: {fileID: 356955067}
 --- !u!65 &1923251738
 BoxCollider:
   m_ObjectHideFlags: 0

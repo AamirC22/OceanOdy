@@ -10,6 +10,8 @@ public class Patrol : MonoBehaviour
     private int currentWaypointIndex = 0; // Index of the current waypoint target
     private bool movingForward = true; // Direction of movement
     public float knockbackStrength = 10f;
+    public HealthBar playerHealthBar;
+
 
     void Update()
     {
@@ -63,15 +65,19 @@ public class Patrol : MonoBehaviour
             Rigidbody playerRigidbody = collision.gameObject.GetComponent<Rigidbody>();
             if (playerRigidbody != null)
             {
-                // Calculate knockback direction horizontally
                 Vector3 knockbackDirection = (collision.transform.position - transform.position).normalized;
                 knockbackDirection.y = 0; // Ignore vertical component
-
-                // Apply the force to the player
                 playerRigidbody.AddForce(knockbackDirection * knockbackStrength, ForceMode.Impulse);
+
+                // Reduce player's health
+                if (playerHealthBar != null)
+                {
+                    playerHealthBar.Health -= 25; // Subtract 25 from player's health
+                }
             }
         }
     }
+
 
 
 }
