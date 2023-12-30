@@ -9,6 +9,7 @@ public class Patrol : MonoBehaviour
 
     private int currentWaypointIndex = 0; // Index of the current waypoint target
     private bool movingForward = true; // Direction of movement
+    public float knockbackStrength = 10f;
 
     void Update()
     {
@@ -54,5 +55,23 @@ public class Patrol : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * speed);
         }
     }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Gamer")
+        {
+            Rigidbody playerRigidbody = collision.gameObject.GetComponent<Rigidbody>();
+            if (playerRigidbody != null)
+            {
+                // Calculate knockback direction horizontally
+                Vector3 knockbackDirection = (collision.transform.position - transform.position).normalized;
+                knockbackDirection.y = 0; // Ignore vertical component
+
+                // Apply the force to the player
+                playerRigidbody.AddForce(knockbackDirection * knockbackStrength, ForceMode.Impulse);
+            }
+        }
+    }
+
+
 }
- 
