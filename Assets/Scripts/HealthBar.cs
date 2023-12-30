@@ -7,17 +7,23 @@ using UnityEngine.SceneManagement;
 
 public class HealthBar : MonoBehaviour
 {
-    private int Health = 100;
+    private int _health = 100;
+    public int Health
+    {
+        get { return _health; }
+        set
+        {
+            _health = value;
+            if (_health <= 0)
+            {
+                SceneManager.LoadScene("DeathScene");
+            }
+        }
+    }
     public TextMeshProUGUI HealthBarText;
 
-
-    // Update is called once per frame
     void Update()
     {
-        HealthBarText.text = "Health: " + Health.ToString("D3");
-        if(Health == 0)
-        {
-            SceneManager.LoadScene("DeathScene");
-        }
+        HealthBarText.text = "Health: " + _health.ToString("D3");
     }
 }

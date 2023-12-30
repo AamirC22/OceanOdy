@@ -6,21 +6,18 @@ public class SharkChase : MonoBehaviour
 {
     public float chaseSpeed = 5f;
     public float chaseTriggerDistance = 10f;
-    // Removed the startPosition from Inspector as it's now hardcoded in Start
+    public float bitingRange = 2f; // New variable for biting range
+    public HealthBar playerHealthBar; // Reference to the HealthBar script
 
     private GameObject player;
     private bool isChasing;
-    private Vector3 originalPosition; // To remember the original start position
+    private Vector3 originalPosition;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Gamer");
         isChasing = false;
-
-        // Hardcoded start position based on the parent's world position
         originalPosition = transform.parent.position + new Vector3(228.5f, 74.25999f, -303.6802f);
-
-        // Move the shark to the start position at the beginning of the game
         transform.position = originalPosition;
     }
 
@@ -28,7 +25,7 @@ public class SharkChase : MonoBehaviour
     {
         if (player == null) return;
 
-        // Measure the distance from the player to the shark's original position (cave)
+        float distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);
         float distanceToPlayerFromOriginalPosition = Vector3.Distance(player.transform.position, originalPosition);
 
         if (distanceToPlayerFromOriginalPosition <= chaseTriggerDistance)
@@ -42,15 +39,14 @@ public class SharkChase : MonoBehaviour
 
         if (isChasing)
         {
-            // Only chase if the shark is not already at the player's position to prevent overshooting
-            if ((transform.position - player.transform.position).sqrMagnitude > 0.1f)
+            if (distanceToPlayer > bitingRange) // Check if outside of biting range
             {
                 MoveTowards(player.transform.position);
             }
             else
             {
-                // If the shark is very close to the player, it can stop moving and just turn to face the player
-                LookAtLastKnownPlayerPosition();
+                // If within biting range, reduce health to 0 and trigger death
+                playerHealthBar.Health = 0;
             }
         }
         else
