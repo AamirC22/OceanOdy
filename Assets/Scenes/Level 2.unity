@@ -8444,7 +8444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chaseSpeed: 10
-  chaseTriggerDistance: 300
+  chaseTriggerDistance: 290
   bitingRange: 35
   playerHealthBar: {fileID: 356955067}
 --- !u!1 &1009468456
