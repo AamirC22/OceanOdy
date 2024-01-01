@@ -23,7 +23,7 @@ public class CoinCount : MonoBehaviour
         coinCountText.text = "Coins: " + coinCount.ToString("D1") + " /4";
         if(coinCount == 4)
         {
-            SceneManager.LoadScene("WinningScene");
+            SceneManager.LoadScene("Level 2");
         }
     }
 
