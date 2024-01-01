@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class HealthBar : MonoBehaviour
 {
     private int _health = 100;
+    [SerializeField] private AudioSource DeathSound;
     public int Health
     {
         get { return _health; }
@@ -17,6 +18,7 @@ public class HealthBar : MonoBehaviour
             HealthBarText.text = "Health: " + _health.ToString("D3"); // Update the UI when the health value changes
             if (_health <= 0)
             {
+                DeathSound.Play();
                 SceneManager.LoadScene("DeathScene");
             }
         }
