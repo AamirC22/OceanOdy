@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 7428809}
   - component: {fileID: 7428808}
   m_Layer: 10
-  m_Name: RegCube4
+  m_Name: FallingPlatform4
   m_TagString: DisappearingCube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -874,7 +874,7 @@ GameObject:
   - component: {fileID: 130851790}
   - component: {fileID: 130851789}
   m_Layer: 10
-  m_Name: RegCube14
+  m_Name: FallingPlatform14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1224,7 +1224,7 @@ GameObject:
   - component: {fileID: 163694525}
   - component: {fileID: 163694524}
   m_Layer: 10
-  m_Name: RegCube27
+  m_Name: FallingPlatform27
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1364,7 +1364,7 @@ GameObject:
   - component: {fileID: 182770354}
   - component: {fileID: 182770353}
   m_Layer: 10
-  m_Name: RegCube12
+  m_Name: FallingPlatform12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1748,7 +1748,7 @@ GameObject:
   - component: {fileID: 233037167}
   - component: {fileID: 233037166}
   m_Layer: 10
-  m_Name: RegCube25
+  m_Name: FallingPlatform25
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2783,7 +2783,7 @@ GameObject:
   - component: {fileID: 481063485}
   - component: {fileID: 481063484}
   m_Layer: 10
-  m_Name: RegCube1
+  m_Name: FallingPlatform1
   m_TagString: DisappearingCube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3156,7 +3156,7 @@ GameObject:
   - component: {fileID: 499793315}
   - component: {fileID: 499793314}
   m_Layer: 10
-  m_Name: RegCube28
+  m_Name: FallingPlatform28
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3425,7 +3425,7 @@ GameObject:
   - component: {fileID: 561909583}
   - component: {fileID: 561909582}
   m_Layer: 10
-  m_Name: RegCube31
+  m_Name: FallingPlatform31
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3565,7 +3565,7 @@ GameObject:
   - component: {fileID: 563156561}
   - component: {fileID: 563156560}
   m_Layer: 10
-  m_Name: RegCube26
+  m_Name: FallingPlatform26
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3737,7 +3737,7 @@ GameObject:
   - component: {fileID: 599364412}
   - component: {fileID: 599364411}
   m_Layer: 10
-  m_Name: RegCube29
+  m_Name: FallingPlatform29
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3947,7 +3947,7 @@ GameObject:
   - component: {fileID: 623154014}
   - component: {fileID: 623154013}
   m_Layer: 10
-  m_Name: RegCube23
+  m_Name: FallingPlatform23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4297,7 +4297,7 @@ GameObject:
   - component: {fileID: 747996760}
   - component: {fileID: 747996759}
   m_Layer: 10
-  m_Name: RegCube35
+  m_Name: FallingPlatform35
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4514,7 +4514,7 @@ GameObject:
   - component: {fileID: 767180618}
   - component: {fileID: 767180617}
   m_Layer: 10
-  m_Name: RegCube5
+  m_Name: FallingPlatform5
   m_TagString: DisappearingCube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5004,7 +5004,7 @@ GameObject:
   - component: {fileID: 860472362}
   - component: {fileID: 860472361}
   m_Layer: 10
-  m_Name: MovingPlatform1
+  m_Name: RegCube1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5419,7 +5419,7 @@ GameObject:
   - component: {fileID: 936951190}
   - component: {fileID: 936951189}
   m_Layer: 10
-  m_Name: RegCube32
+  m_Name: FallingPlatform32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5759,7 +5759,7 @@ GameObject:
   - component: {fileID: 957800953}
   - component: {fileID: 957800952}
   m_Layer: 10
-  m_Name: RegCube20
+  m_Name: FallingPlatform20
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6757,7 +6757,7 @@ GameObject:
   - component: {fileID: 1048663978}
   - component: {fileID: 1048663977}
   m_Layer: 10
-  m_Name: RegCube19
+  m_Name: FallingPlatform19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7004,7 +7004,7 @@ GameObject:
   - component: {fileID: 1073292638}
   - component: {fileID: 1073292637}
   m_Layer: 10
-  m_Name: RegCube6
+  m_Name: FallingPlatform6
   m_TagString: DisappearingCube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7388,7 +7388,7 @@ GameObject:
   - component: {fileID: 1116911271}
   - component: {fileID: 1116911270}
   m_Layer: 10
-  m_Name: RegCube18
+  m_Name: FallingPlatform18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7528,7 +7528,7 @@ GameObject:
   - component: {fileID: 1163382137}
   - component: {fileID: 1163382136}
   m_Layer: 10
-  m_Name: RegCube33
+  m_Name: FallingPlatform33
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7774,7 +7774,7 @@ GameObject:
   - component: {fileID: 1194285552}
   - component: {fileID: 1194285551}
   m_Layer: 10
-  m_Name: RegCube15
+  m_Name: FallingPlatform15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8110,7 +8110,7 @@ GameObject:
   - component: {fileID: 1253005831}
   - component: {fileID: 1253005830}
   m_Layer: 10
-  m_Name: MovingPlatform3
+  m_Name: RegCube2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8454,7 +8454,7 @@ GameObject:
   - component: {fileID: 1304633767}
   - component: {fileID: 1304633766}
   m_Layer: 10
-  m_Name: RegCube11
+  m_Name: FallingPlatform11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8594,7 +8594,7 @@ GameObject:
   - component: {fileID: 1322238387}
   - component: {fileID: 1322238386}
   m_Layer: 10
-  m_Name: RegCube24
+  m_Name: FallingPlatform24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8839,7 +8839,7 @@ GameObject:
   - component: {fileID: 1323170510}
   - component: {fileID: 1323170509}
   m_Layer: 10
-  m_Name: RegCube21
+  m_Name: FallingPlatform21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9113,7 +9113,7 @@ GameObject:
   - component: {fileID: 1362799120}
   - component: {fileID: 1362799119}
   m_Layer: 10
-  m_Name: RegCube13
+  m_Name: FallingPlatform13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9535,7 +9535,7 @@ GameObject:
   - component: {fileID: 1455828727}
   - component: {fileID: 1455828726}
   m_Layer: 10
-  m_Name: RegCube9
+  m_Name: FallingPlatform9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9980,7 +9980,7 @@ GameObject:
   - component: {fileID: 1596017547}
   - component: {fileID: 1596017546}
   m_Layer: 10
-  m_Name: RegCube17
+  m_Name: FallingPlatform17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10393,7 +10393,7 @@ GameObject:
   - component: {fileID: 1675108114}
   - component: {fileID: 1675108113}
   m_Layer: 10
-  m_Name: RegCube8
+  m_Name: FallingPlatform8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11011,7 +11011,7 @@ GameObject:
   - component: {fileID: 1783308255}
   - component: {fileID: 1783308254}
   m_Layer: 10
-  m_Name: RegCube22
+  m_Name: FallingPlatform22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11151,7 +11151,7 @@ GameObject:
   - component: {fileID: 1806558444}
   - component: {fileID: 1806558443}
   m_Layer: 10
-  m_Name: RegCube7
+  m_Name: FallingPlatform7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12171,7 +12171,7 @@ GameObject:
   - component: {fileID: 1928126059}
   - component: {fileID: 1928126058}
   m_Layer: 10
-  m_Name: RegCube30
+  m_Name: FallingPlatform30
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12311,7 +12311,7 @@ GameObject:
   - component: {fileID: 1940331603}
   - component: {fileID: 1940331602}
   m_Layer: 10
-  m_Name: RegCube16
+  m_Name: FallingPlatform16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12715,7 +12715,7 @@ GameObject:
   - component: {fileID: 1968173712}
   - component: {fileID: 1968173711}
   m_Layer: 10
-  m_Name: RegCube34
+  m_Name: FallingPlatform34
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13057,7 +13057,7 @@ GameObject:
   - component: {fileID: 2005192530}
   - component: {fileID: 2005192529}
   m_Layer: 10
-  m_Name: RegCube2
+  m_Name: FallingPlatform2
   m_TagString: DisappearingCube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13230,7 +13230,7 @@ GameObject:
   - component: {fileID: 2066846923}
   - component: {fileID: 2066846922}
   m_Layer: 10
-  m_Name: RegCube10
+  m_Name: FallingPlatform10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13619,7 +13619,7 @@ GameObject:
   - component: {fileID: 2122647337}
   - component: {fileID: 2122647336}
   m_Layer: 10
-  m_Name: RegCube3
+  m_Name: FallingPlatform3
   m_TagString: DisappearingCube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
