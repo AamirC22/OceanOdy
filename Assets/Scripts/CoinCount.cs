@@ -11,6 +11,8 @@ public class CoinCount : MonoBehaviour
     public TextMeshProUGUI coinCountText;
     public static CoinCount Instance;
 
+    [SerializeField] private AudioSource CoinSound;
+
     void Start()
     {
         Instance = this; 
@@ -23,12 +25,13 @@ public class CoinCount : MonoBehaviour
         coinCountText.text = "Coins: " + coinCount.ToString("D1") + " /4";
         if(coinCount == 4)
         {
-            SceneManager.LoadScene("Level 2");
+            SceneManager.LoadScene("WinningScene");
         }
     }
 
     public void UpdateCoinCount(int value)
     {
+        CoinSound.Play();
         coinCount += value;
         coinCountText.text = "Coins: " + coinCount.ToString("D1") + " /4";
     }
