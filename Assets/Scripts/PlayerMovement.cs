@@ -18,6 +18,8 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public float walkSpeed;
     [HideInInspector] public float sprintSpeed;
 
+    [SerializeField] private AudioSource jumpSound;
+
     [Header("Keybinds")]
     public KeyCode jumpKey = KeyCode.Space;
 
@@ -72,7 +74,6 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(jumpKey) && readyToJump && grounded)
         {
             readyToJump = false;
-
             Jump();
 
             Invoke(nameof(ResetJump), jumpCooldown);
@@ -107,6 +108,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
+        jumpSound.Play();
         // reset y velocity
         rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
 
