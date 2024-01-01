@@ -11,7 +11,7 @@ public class CoinCount : MonoBehaviour
     public TextMeshProUGUI coinCountText;
     public static CoinCount Instance;
 
-    [SerializeField]
+    [SerializeField] private AudioSource CoinSound;
 
     void Start()
     {
@@ -31,6 +31,7 @@ public class CoinCount : MonoBehaviour
 
     public void UpdateCoinCount(int value)
     {
+        CoinSound.Play();
         coinCount += value;
         coinCountText.text = "Coins: " + coinCount.ToString("D1") + " /4";
     }
