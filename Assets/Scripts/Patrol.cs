@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class Patrol : MonoBehaviour
 {
-    public float speed = 5f; // Speed of the stingray's movement
-    public Transform[] waypoints; // Points between which the stingray will move
-
-    private int currentWaypointIndex = 0; // Index of the current waypoint target
-    private bool movingForward = true; // Direction of movement
+    public float speed = 5f;
+    public Transform[] waypoints;
     public float knockbackStrength = 10f;
     public HealthBar playerHealthBar;
+
+    private int currentWaypointIndex = 0;
+    private bool movingForward = true;
+    private float timeSinceLastHit = 0f;  // Timer to track time since last hit
+    public float hitCooldown = 3f;  // Cooldown duration in seconds
 
 
     void Update()
@@ -56,6 +58,12 @@ public class Patrol : MonoBehaviour
             Quaternion lookRotation = Quaternion.LookRotation(direction);
             transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * speed);
         }
+
+        // Increment the time since last hit
+        if (timeSinceLastHit < hitCooldown)
+        {
+            timeSinceLastHit += Time.deltaTime;
+        }
     }
 
     void OnCollisionEnter(Collision collision)
@@ -66,18 +74,20 @@ public class Patrol : MonoBehaviour
             if (playerRigidbody != null)
             {
                 Vector3 knockbackDirection = (collision.transform.position - transform.position).normalized;
-                knockbackDirection.y = 0; // Ignore vertical component
+                knockbackDirection.y = 0;
                 playerRigidbody.AddForce(knockbackDirection * knockbackStrength, ForceMode.Impulse);
 
-                // Reduce player's health
-                if (playerHealthBar != null)
+                // Check if cooldown has passed before applying damage again
+                if (timeSinceLastHit >= hitCooldown)
                 {
-                    playerHealthBar.Health -= 25; // Subtract 25 from player's health
+                    if (playerHealthBar != null)
+                    {
+                        playerHealthBar.Health -= 25;
+                        // Reset the timer
+                        timeSinceLastHit = 0f;
+                    }
                 }
             }
         }
     }
-
-
-
 }
