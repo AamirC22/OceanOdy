@@ -8,22 +8,22 @@ using UnityEngine.SceneManagement;
 public class CoinCount : MonoBehaviour
 {
     public int coinCount = 0;
-    public TextMeshProUGUI coinCountText;
+    //public TextMeshProUGUI coinCountText;
     public static CoinCount Instance;
 
     [SerializeField] private AudioSource CoinSound;
+    public Image[] coinImages; // Reference to the UI coin outlines
 
     void Start()
     {
-        Instance = this; 
+        Instance = this;
+        UpdateCoinUI(); // update the UI on start
     }
 
-
-    // Update is called once per frame
     void Update()
     {
-        coinCountText.text = "Coins: " + coinCount.ToString("D1") + " /4";
-        if(coinCount == 4)
+        
+        if (coinCount == 4)
         {
             SceneManager.LoadScene("WinningScene");
         }
@@ -33,6 +33,15 @@ public class CoinCount : MonoBehaviour
     {
         CoinSound.Play();
         coinCount += value;
-        coinCountText.text = "Coins: " + coinCount.ToString("D1") + " /4";
+        //coinCountText.text = "Coins: " + coinCount.ToString("D1") + " /4";
+        UpdateCoinUI(); // Update the coin UI whenever the coin count changes
+    }
+
+    private void UpdateCoinUI()
+    {
+        for (int i = 0; i < coinImages.Length; i++)
+        {
+            coinImages[i].enabled = i < coinCount; // enables the image if the index is less than the coin count
+        }
     }
 }

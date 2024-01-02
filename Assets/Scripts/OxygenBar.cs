@@ -22,7 +22,7 @@ public class OxygenBar : MonoBehaviour
         while (slider.value > 0)
         {
             yield return new WaitForSeconds(1); // Wait for 1 second
-            SetOxygen((int)slider.value - 10); // !!!!!!!!!!!!!!!!!!!!!!!!!!!!! CHANGE THIS BACK TO 1 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            SetOxygen((int)slider.value - 1); // decrease oxygen by 1
         }
         // If oxygen level is 0, load the 'OxygenDepleted' scene
         SceneManager.LoadScene("OxygenDepleted");
