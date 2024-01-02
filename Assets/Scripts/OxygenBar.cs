@@ -22,7 +22,7 @@ public class OxygenBar : MonoBehaviour
         while (slider.value > 0)
         {
             yield return new WaitForSeconds(1); // Wait for 1 second
-            SetOxygen((int)slider.value - 1); // Decrease oxygen level by 1
+            SetOxygen((int)slider.value - 10); // !!!!!!!!!!!!!!!!!!!!!!!!!!!!! CHANGE THIS BACK TO 1 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         }
         // If oxygen level is 0, load the 'OxygenDepleted' scene
         SceneManager.LoadScene("OxygenDepleted");
@@ -32,7 +32,7 @@ public class OxygenBar : MonoBehaviour
     public void SetOxygen(int oxygen)
     {
         slider.value = oxygen;
-        UpdateOxygenText(); // Update the oxygen text
+        //UpdateOxygenText(); // Update the oxygen text
     }
 
     // Method to set the maximum oxygen level
@@ -40,7 +40,7 @@ public class OxygenBar : MonoBehaviour
     {
         slider.maxValue = oxygen;
         slider.value = oxygen;
-        UpdateOxygenText(); // Update the oxygen text
+        //UpdateOxygenText(); // Update the oxygen text
     }
 
     // Method to update the oxygen text
