@@ -18,14 +18,10 @@ public class PauseMenu : MonoBehaviour
         {
             if (isGamePaused)
             {
-                Cursor.visible = false;
-                Cursor.lockState = CursorLockMode.Locked;
                 resumeGame();
             }
             else
             {
-                Cursor.visible = true;
-                Cursor.lockState = CursorLockMode.None;
                 pauseGame();
             }
         }
@@ -34,6 +30,8 @@ public class PauseMenu : MonoBehaviour
 
     public void resumeGame()
     {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
         showPauseMenu.SetActive(false);
         showHealthBar.SetActive(true);
         showOxygenBar.SetActive(true);
@@ -44,6 +42,8 @@ public class PauseMenu : MonoBehaviour
 
     void pauseGame()
     {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         showPauseMenu.SetActive(true);
         showHealthBar.SetActive(false);
         showOxygenBar.SetActive(false);
