@@ -552,7 +552,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -132, y: 245}
+  m_AnchoredPosition: {x: -132, y: 157}
   m_SizeDelta: {x: 399.5294, y: 135.844}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &744727521
@@ -577,8 +577,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Ocean Odyssey: Treasures of the Deep'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b73da58be7bfaa04799e6c3b34c4d4c5, type: 2}
-  m_sharedMaterial: {fileID: -4348134543819658850, guid: b73da58be7bfaa04799e6c3b34c4d4c5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 09eec4b58166bf24a884d19dfa122ea2, type: 2}
+  m_sharedMaterial: {fileID: -1739963797477958018, guid: 09eec4b58166bf24a884d19dfa122ea2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -602,8 +602,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 82.5
-  m_fontSizeBase: 82.5
+  m_fontSize: 105
+  m_fontSizeBase: 105
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -711,8 +711,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: YOU RAN OUT OF OXYGEN
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b73da58be7bfaa04799e6c3b34c4d4c5, type: 2}
-  m_sharedMaterial: {fileID: -4348134543819658850, guid: b73da58be7bfaa04799e6c3b34c4d4c5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 09eec4b58166bf24a884d19dfa122ea2, type: 2}
+  m_sharedMaterial: {fileID: -1739963797477958018, guid: 09eec4b58166bf24a884d19dfa122ea2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -736,8 +736,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 76.6
-  m_fontSizeBase: 76.6
+  m_fontSize: 90
+  m_fontSizeBase: 90
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1167,8 +1167,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Restart
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 09eec4b58166bf24a884d19dfa122ea2, type: 2}
+  m_sharedMaterial: {fileID: -1739963797477958018, guid: 09eec4b58166bf24a884d19dfa122ea2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1192,8 +1192,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
