@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 using UnityEngine.SceneManagement;
 
 public class CoinCount : MonoBehaviour
@@ -22,10 +19,16 @@ public class CoinCount : MonoBehaviour
 
     void Update()
     {
-        
         if (coinCount == 4)
         {
-            SceneManager.LoadScene("WinningScene");
+            if (SceneManager.GetActiveScene().name == "Platform1")
+            {
+                SceneManager.LoadScene("Level2");
+            }
+            else if (SceneManager.GetActiveScene().name == "Level2")
+            {
+                SceneManager.LoadScene("WinningScene");
+            }
         }
     }
 
