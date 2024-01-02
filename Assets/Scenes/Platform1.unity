@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1390,11 +1390,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 589014521}
-  m_Father: {fileID: 1823018891}
+  m_Father: {fileID: 786861732}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 552, y: 422.51987}
+  m_AnchoredPosition: {x: 90.00006, y: -0.000030517578}
   m_SizeDelta: {x: 53.8661, y: 51.8666}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &161545724
@@ -2995,11 +2995,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 342925563}
-  m_Father: {fileID: 1823018891}
+  m_Father: {fileID: 786861732}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 732.93005, y: 422.52}
+  m_AnchoredPosition: {x: 270.92993, y: 0.00018310547}
   m_SizeDelta: {x: 53.8661, y: 51.8666}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &439472293
@@ -5617,6 +5617,45 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 779815122}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &786861731
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 786861732}
+  m_Layer: 5
+  m_Name: CoinGroup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &786861732
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786861731}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1368894272}
+  - {fileID: 161545723}
+  - {fileID: 1782246433}
+  - {fileID: 439472292}
+  m_Father: {fileID: 1823018891}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 462, y: 273}
+  m_SizeDelta: {x: 53.86609, y: 51.866577}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &799607349 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f48a1b3e05cf7d94f9ec9b272c050643, type: 3}
@@ -10300,11 +10339,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 673510012}
-  m_Father: {fileID: 1823018891}
+  m_Father: {fileID: 786861732}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 462, y: 422.51987}
+  m_AnchoredPosition: {x: -0.000030517578, y: -0.000030517578}
   m_SizeDelta: {x: 53.8661, y: 51.8666}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1368894273
@@ -12444,11 +12483,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 110649760}
-  m_Father: {fileID: 1823018891}
+  m_Father: {fileID: 786861732}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 641.9999, y: 422.51987}
+  m_AnchoredPosition: {x: 179.99994, y: -0.000030517578}
   m_SizeDelta: {x: 53.8661, y: 51.8666}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1782246434
@@ -13107,10 +13146,7 @@ RectTransform:
   - {fileID: 1150836064}
   - {fileID: 689668319}
   - {fileID: 1375476943}
-  - {fileID: 1368894272}
-  - {fileID: 161545723}
-  - {fileID: 1782246433}
-  - {fileID: 439472292}
+  - {fileID: 786861732}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -13133,7 +13169,7 @@ MonoBehaviour:
   showPauseMenu: {fileID: 1375476942}
   showOxygenBar: {fileID: 1150836063}
   showHealthBar: {fileID: 689668318}
-  showCoins: {fileID: 2094967340}
+  showCoins: {fileID: 786861731}
 --- !u!1001 &1837249676
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15445,7 +15481,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinCount: 0
-  coinCountText: {fileID: 2094967343}
   CoinSound: {fileID: 2094967345}
   coinImages:
   - {fileID: 673510013}
