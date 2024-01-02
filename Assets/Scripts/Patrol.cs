@@ -12,7 +12,7 @@ public class Patrol : MonoBehaviour
     private int currentWaypointIndex = 0;
     private bool movingForward = true;
     private float timeSinceLastHit = 0f;  // Timer to track time since last hit
-    public float hitCooldown = 3f;  // Cooldown duration in seconds
+    public float hitCooldown = 1f;  // Cooldown duration in seconds
 
 
     void Update()
@@ -68,14 +68,19 @@ public class Patrol : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("Collision Detected with: " + collision.gameObject.name);
+
         if (collision.gameObject.tag == "Gamer")
         {
+            Debug.Log("It's the player!");
+
             Rigidbody playerRigidbody = collision.gameObject.GetComponent<Rigidbody>();
             if (playerRigidbody != null)
             {
                 Vector3 knockbackDirection = (collision.transform.position - transform.position).normalized;
-                knockbackDirection.y = 0;
+                knockbackDirection.y = 0; // Ensure we don't apply knockback in the Y axis
                 playerRigidbody.AddForce(knockbackDirection * knockbackStrength, ForceMode.Impulse);
+                Debug.Log("Player knocked back.");
 
                 // Check if cooldown has passed before applying damage again
                 if (timeSinceLastHit >= hitCooldown)
@@ -83,11 +88,29 @@ public class Patrol : MonoBehaviour
                     if (playerHealthBar != null)
                     {
                         playerHealthBar.Health -= 25;
+                        Debug.Log("Player health after hit: " + playerHealthBar.Health);
                         // Reset the timer
                         timeSinceLastHit = 0f;
                     }
+                    else
+                    {
+                        Debug.LogError("PlayerHealthBar reference is not set in the Patrol script.");
+                    }
+                }
+                else
+                {
+                    Debug.Log("Hit cooldown in progress. Time since last hit: " + timeSinceLastHit);
                 }
             }
+            else
+            {
+                Debug.LogError("No Rigidbody component found on the player!");
+            }
+        }
+        else
+        {
+            Debug.Log("Collision with non-player object.");
         }
     }
+
 }
