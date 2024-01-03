@@ -21,14 +21,15 @@ public class VolumeSettings : MonoBehaviour
             Debug.LogError("AudioSource not assigned to VolumeControl script!");
             return;
         }
-        volumeSlider.value = audioSource.volume;
-        sfxSlider.value = audioSource.volume;
+        volumeSlider.value = PlayerPrefs.GetFloat("musicVolume");
+        sfxSlider.value = PlayerPrefs.GetFloat("sfxVolume");
         settingsPanel.SetActive(false);
         settingsBTN.SetActive(true);
     }
     public void OnVolumeChanged()
     {
         audioSource.volume = volumeSlider.value;
+        PlayerPrefs.SetFloat("musicVolume", audioSource.volume);
     }
 
     public void ShowSettingsPage()
@@ -51,6 +52,7 @@ public class VolumeSettings : MonoBehaviour
             if (sfxSource != null)
             {
                 sfxSource.volume = sfxSlider.value;
+                PlayerPrefs.SetFloat("sfxVolume", sfxSource.volume);
             }
         }
     }
