@@ -20473,6 +20473,7 @@ MonoBehaviour:
   showHealthBar: {fileID: 383214567}
   showCoins: {fileID: 587737038}
   settingsPanel: {fileID: 374183460}
+  settingsBTN: {fileID: 1293291340}
 --- !u!114 &1935820663
 MonoBehaviour:
   m_ObjectHideFlags: 0
