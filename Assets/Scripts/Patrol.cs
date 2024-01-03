@@ -5,15 +5,16 @@ using UnityEngine;
 public class Patrol : MonoBehaviour
 {
     public float speed = 5f;
-    public Transform[] waypoints;
     public float knockbackStrength = 10f;
+    public Transform[] waypoints;
     public HealthBar playerHealthBar;
 
     private int currentWaypointIndex = 0;
     private bool movingForward = true;
-    private float timeSinceLastHit = 0f;  // Timer to track time since last hit
-    public float hitCooldown = 1f;  // Cooldown duration in seconds
-
+    private float timeSinceLastHit = 0f; 
+    private float timeSinceLastKnockback = 0f; 
+    public float hitCooldown = 1f; 
+    public float knockbackCooldown = 1f; 
 
     void Update()
     {
@@ -51,7 +52,7 @@ public class Patrol : MonoBehaviour
             }
         }
 
-        // Rotate the stingray to face the next waypoint
+        // Rotate stingray
         Vector3 direction = (targetWaypoint.position - transform.position).normalized;
         if (direction != Vector3.zero)
         {
@@ -63,6 +64,12 @@ public class Patrol : MonoBehaviour
         if (timeSinceLastHit < hitCooldown)
         {
             timeSinceLastHit += Time.deltaTime;
+        }
+
+        // Increment the time since last knockback
+        if (timeSinceLastKnockback < knockbackCooldown)
+        {
+            timeSinceLastKnockback += Time.deltaTime;
         }
     }
 
@@ -77,20 +84,22 @@ public class Patrol : MonoBehaviour
             Rigidbody playerRigidbody = collision.gameObject.GetComponent<Rigidbody>();
             if (playerRigidbody != null)
             {
-                Vector3 knockbackDirection = (collision.transform.position - transform.position).normalized;
-                knockbackDirection.y = 0; // Ensure we don't apply knockback in the Y axis
-                playerRigidbody.AddForce(knockbackDirection * knockbackStrength, ForceMode.Impulse);
-                Debug.Log("Player knocked back.");
-
-                // Check if cooldown has passed before applying damage again
-                if (timeSinceLastHit >= hitCooldown)
+                // Check if cooldown has passed before applying damage and knockback again
+                if (timeSinceLastHit >= hitCooldown && timeSinceLastKnockback >= knockbackCooldown)
                 {
                     if (playerHealthBar != null)
                     {
                         playerHealthBar.Health -= 25;
                         Debug.Log("Player health after hit: " + playerHealthBar.Health);
-                        // Reset the timer
+
+                        // Calculate and apply knockback force
+                        Vector3 knockbackDirection = (collision.transform.position - transform.position).normalized;
+                        knockbackDirection.y = 0; // knockback is only applied to horizontal plane
+                        playerRigidbody.AddForce(knockbackDirection * knockbackStrength, ForceMode.Impulse);
+
+                        // Reset the timers
                         timeSinceLastHit = 0f;
+                        timeSinceLastKnockback = 0f;
                     }
                     else
                     {
@@ -99,7 +108,7 @@ public class Patrol : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Hit cooldown in progress. Time since last hit: " + timeSinceLastHit);
+                    Debug.Log("Cooldown in progress. Time since last hit: " + timeSinceLastHit + ", Time since last knockback: " + timeSinceLastKnockback);
                 }
             }
             else
@@ -112,5 +121,4 @@ public class Patrol : MonoBehaviour
             Debug.Log("Collision with non-player object.");
         }
     }
-
 }
