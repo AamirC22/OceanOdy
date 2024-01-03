@@ -3050,7 +3050,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c2f8b37ce65e14bb6ec28e69c05265, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeSettings: {fileID: 0}
   healthSlider: {fileID: 383214569}
 --- !u!82 &356955068
 AudioSource:
@@ -3550,7 +3549,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c2f8b37ce65e14bb6ec28e69c05265, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeSettings: {fileID: 1935820663}
   healthSlider: {fileID: 383214569}
 --- !u!1 &390518920
 GameObject:
@@ -14731,7 +14729,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.000102, y: -201.99934}
+  m_AnchoredPosition: {x: -2.000102, y: -139}
   m_SizeDelta: {x: 272.2228, y: 51.0418}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1334355281
@@ -15575,7 +15573,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e2eeb831f2d2204d97d34a529690304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeSettings: {fileID: 1935820663}
   slider: {fileID: 1457923989}
   oxygenText: {fileID: 1033501354}
 --- !u!1 &1458921569
@@ -17006,7 +17003,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2, y: -126}
+  m_AnchoredPosition: {x: -2, y: -228}
   m_SizeDelta: {x: 272.2228, y: 51.0418}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1621013855
@@ -18370,7 +18367,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinCount: 0
-  volumeSettings: {fileID: 0}
   CoinSound: {fileID: 1751319409}
   coinImages:
   - {fileID: 943507396}
@@ -20476,6 +20472,7 @@ MonoBehaviour:
   showOxygenBar: {fileID: 1457923987}
   showHealthBar: {fileID: 383214567}
   showCoins: {fileID: 587737038}
+  settingsPanel: {fileID: 374183460}
 --- !u!114 &1935820663
 MonoBehaviour:
   m_ObjectHideFlags: 0

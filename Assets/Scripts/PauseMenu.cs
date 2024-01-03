@@ -10,6 +10,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject showOxygenBar;
     public GameObject showHealthBar;
     public GameObject showCoins;
+    public GameObject settingsPanel;
 
     // Update is called once per frame
     void Update()
@@ -18,6 +19,7 @@ public class PauseMenu : MonoBehaviour
         {
             if (isGamePaused)
             {
+                settingsPanel.SetActive(false);
                 resumeGame();
             }
             else
