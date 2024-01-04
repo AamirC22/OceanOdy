@@ -14,4 +14,9 @@ public class RestartGame : MonoBehaviour
     {
         SceneManager.LoadScene("Platform1");
     }
+
+    public void ShowGameInstructions()
+    {
+        SceneManager.LoadScene("Instructions");
+    }
 }
