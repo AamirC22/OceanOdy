@@ -23174,7 +23174,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   showPauseMenu: {fileID: 863274462}
-  showOxygenBar: {fileID: 1457923987}
+  oxygenBarFill: {fileID: 1037207532}
+  oxygenBarOutline: {fileID: 685572654}
+  oxygenBarIcon: {fileID: 1110673463}
   showHealthBar: {fileID: 383214567}
   showCoins: {fileID: 587737038}
   settingsPanel: {fileID: 374183460}

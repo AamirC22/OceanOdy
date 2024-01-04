@@ -12,7 +12,7 @@ public class OxygenBar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SetMaxOxygen(100); // Set the maximum oxygen level to 1000 at the start //100 TEMP FOR TESTING
+        SetMaxOxygen(1000); // Set the maximum oxygen level to 1000 at the start
         StartCoroutine(DecreaseOxygen()); // Start the coroutine to decrease oxygen over time
     }
 
