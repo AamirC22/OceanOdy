@@ -3117,7 +3117,7 @@ Transform:
   m_GameObject: {fileID: 356955057}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.9659258, z: 0, w: 0.2588191}
-  m_LocalPosition: {x: 6211.31, y: -249.03, z: 2268.9}
+  m_LocalPosition: {x: 6223.68, y: -280.53, z: 2350.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -20899,7 +20899,7 @@ Terrain:
   serializedVersion: 6
   m_TerrainData: {fileID: 15600000, guid: e84e28f0db6994c4cbe88702de2e1e57, type: 2}
   m_TreeDistance: 5000
-  m_TreeBillboardDistance: 50
+  m_TreeBillboardDistance: 2000
   m_TreeCrossFadeLength: 5
   m_TreeMaximumFullLODCount: 50
   m_DetailObjectDistance: 80
@@ -23775,6 +23775,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2145260206}
   m_CullTransparentMesh: 1
+--- !u!1001 &6285812259306617090
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5203197834394842002, guid: 194817a6a01eb0c4cb75f4d773c7819a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6204
+      objectReference: {fileID: 0}
+    - target: {fileID: 5203197834394842002, guid: 194817a6a01eb0c4cb75f4d773c7819a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -255.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5203197834394842002, guid: 194817a6a01eb0c4cb75f4d773c7819a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2458.615
+      objectReference: {fileID: 0}
+    - target: {fileID: 5203197834394842002, guid: 194817a6a01eb0c4cb75f4d773c7819a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5203197834394842002, guid: 194817a6a01eb0c4cb75f4d773c7819a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5203197834394842002, guid: 194817a6a01eb0c4cb75f4d773c7819a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5203197834394842002, guid: 194817a6a01eb0c4cb75f4d773c7819a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5203197834394842002, guid: 194817a6a01eb0c4cb75f4d773c7819a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5203197834394842002, guid: 194817a6a01eb0c4cb75f4d773c7819a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5203197834394842002, guid: 194817a6a01eb0c4cb75f4d773c7819a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9110255398232342913, guid: 194817a6a01eb0c4cb75f4d773c7819a, type: 3}
+      propertyPath: m_Name
+      value: Rock7Collider
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 194817a6a01eb0c4cb75f4d773c7819a, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -23793,3 +23850,4 @@ SceneRoots:
   - {fileID: 215278857}
   - {fileID: 30440764}
   - {fileID: 457634775}
+  - {fileID: 6285812259306617090}
