@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2755,8 +2755,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b20bb7cad7c3f8540940638c57c502c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeSpeed: 0.7
-  interval: 6
+  fadeSpeed: 0.03
+  interval: 1
 --- !u!65 &288248213
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9904,8 +9904,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b20bb7cad7c3f8540940638c57c502c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeSpeed: 0.7
-  interval: 11
+  fadeSpeed: 0.03
+  interval: 3
 --- !u!65 &807451640
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11176,7 +11176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b20bb7cad7c3f8540940638c57c502c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeSpeed: 0.7
+  fadeSpeed: 0.02
   interval: 6
 --- !u!65 &892570215
 BoxCollider:
@@ -14566,7 +14566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b20bb7cad7c3f8540940638c57c502c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeSpeed: 0.7
+  fadeSpeed: 0.02
   interval: 5
 --- !u!65 &1156618190
 BoxCollider:
@@ -19333,7 +19333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeSpeed: 0.025
-  interval: 6
+  interval: 3
 --- !u!65 &1644878307
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21364,8 +21364,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b20bb7cad7c3f8540940638c57c502c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeSpeed: 0.7
-  interval: 3
+  fadeSpeed: 0.1
+  interval: 4
 --- !u!1 &1771228637
 GameObject:
   m_ObjectHideFlags: 0
@@ -21948,8 +21948,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b20bb7cad7c3f8540940638c57c502c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeSpeed: 0.7
-  interval: 8
+  fadeSpeed: 0.01
+  interval: 6
 --- !u!65 &1832468645
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25086,7 +25086,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeSpeed: 0.025
-  interval: 6
+  interval: 1
 --- !u!65 &2098950750
 BoxCollider:
   m_ObjectHideFlags: 0
