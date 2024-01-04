@@ -2,27 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SharkPatrol : MonoBehaviour
+public class FriendlyFishPatrol : MonoBehaviour
 {
-    public float speed = 5.0f; // Speed at which the shark moves in the orbit
+    public float speed = 5.0f; // Speed at which the fish moves in the orbit
     public float orbitDistance = 20.0f; // The radius of the orbit
     public float orbitDegreesPerSec = 30.0f; // The speed of the orbit in degrees per second
-    public Vector3 orbitPoint; // The point around which the shark will orbit
+    private Vector3 orbitPoint; // The point around which the fish will orbit, now private
 
     private Vector3 previousPosition; // To store the position from the previous frame
 
     void Start()
     {
-        // Initialize the shark's position on the orbit
-        previousPosition = transform.position;
+        // Use the fish's starting position as the orbit point
+        orbitPoint = transform.position;
+
+        // Move the fish to the start of the orbit based on the orbit distance
+        previousPosition = orbitPoint + (transform.forward * orbitDistance);
+        transform.position = previousPosition;
     }
 
     void Update()
     {
         // Calculate the next position in the orbit
-        Vector3 newPosition = orbitPoint + (Quaternion.Euler(0, orbitDegreesPerSec * Time.deltaTime, 0) * (transform.position - orbitPoint).normalized) * orbitDistance;
+        Vector3 offset = transform.position - orbitPoint;
+        Vector3 newPosition = orbitPoint + (Quaternion.Euler(0, orbitDegreesPerSec * Time.deltaTime, 0) * offset.normalized) * orbitDistance;
 
-        // Move the shark to the new position
+        // Move the fish to the new position
         transform.position = newPosition;
 
         // Look in the direction of the movement
