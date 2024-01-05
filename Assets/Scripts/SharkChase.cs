@@ -6,8 +6,11 @@ public class SharkChase : MonoBehaviour
 {
     public float chaseSpeed = 5f;
     public float chaseTriggerDistance = 10f;
-    public float bitingRange = 2f; // New variable for biting range
-    public HealthBar playerHealthBar; // Reference to the HealthBar script
+    public float bitingRange = 2f; 
+    public HealthBar playerHealthBar; 
+
+    public AudioSource normalMusic; 
+    public AudioSource horrorMusic; 
 
     private GameObject player;
     private bool isChasing;
@@ -19,6 +22,9 @@ public class SharkChase : MonoBehaviour
         isChasing = false;
         originalPosition = transform.parent.position + new Vector3(228.5f, 74.25999f, -303.6802f);
         transform.position = originalPosition;
+
+
+        horrorMusic.Stop(); 
     }
 
     void Update()
@@ -28,13 +34,15 @@ public class SharkChase : MonoBehaviour
         float distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);
         float distanceToPlayerFromOriginalPosition = Vector3.Distance(player.transform.position, originalPosition);
 
-        if (distanceToPlayerFromOriginalPosition <= chaseTriggerDistance)
+        // If the player is within chase range and the shark is not currently chasing
+        if (distanceToPlayerFromOriginalPosition <= chaseTriggerDistance && !isChasing)
         {
-            isChasing = true;
+            StartChase();
         }
-        else
+        // If the player is outside chase range and the shark is currently chasing
+        else if (distanceToPlayerFromOriginalPosition > chaseTriggerDistance && isChasing)
         {
-            isChasing = false;
+            StopChase();
         }
 
         if (isChasing)
@@ -62,6 +70,24 @@ public class SharkChase : MonoBehaviour
             }
         }
     }
+
+    void StartChase()
+    {
+        isChasing = true;
+        normalMusic.Stop();
+        horrorMusic.volume = PlayerPrefs.GetFloat("musicVolume", 1f); 
+        horrorMusic.Play(); 
+    }
+
+    void StopChase()
+    {
+        isChasing = false;
+        horrorMusic.Stop(); 
+        normalMusic.volume = PlayerPrefs.GetFloat("musicVolume", 1f); 
+        normalMusic.Play(); 
+    }
+
+
 
     void LookAtLastKnownPlayerPosition()
     {
