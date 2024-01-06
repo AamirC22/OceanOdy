@@ -7,6 +7,7 @@ public class CoinCount : MonoBehaviour
     public int coinCount = 0;
     //public TextMeshProUGUI coinCountText;
     public static CoinCount Instance;
+    public LevelLoad levelLoad;
 
     [SerializeField] private AudioSource CoinSound;
     public Image[] coinImages; // Reference to the UI coin outlines
@@ -23,11 +24,11 @@ public class CoinCount : MonoBehaviour
         {
             if (SceneManager.GetActiveScene().name == "Platform1")
             {
-                SceneManager.LoadScene("Level2");
+                levelLoad.LoadLevel2();
             }
             else if (SceneManager.GetActiveScene().name == "Level2")
             {
-                SceneManager.LoadScene("WinningScene");
+                levelLoad.LoadWinningScene();
             }
         }
     }

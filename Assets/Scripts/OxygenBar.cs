@@ -7,7 +7,8 @@ using UnityEngine.UI;
 public class OxygenBar : MonoBehaviour
 {
     public Slider slider; // Reference to the Slider component
-    public TextMeshProUGUI oxygenText; // Reference to the TextMeshPro component
+    public TextMeshProUGUI oxygenText;
+    public LevelLoad levelLoad;
 
     // Start is called before the first frame update
     void Start()
@@ -24,8 +25,7 @@ public class OxygenBar : MonoBehaviour
             yield return new WaitForSeconds(1); // Wait for 1 second
             SetOxygen((int)slider.value - 1); // decrease oxygen by 1
         }
-        // If oxygen level is 0, load the 'OxygenDepleted' scene
-        SceneManager.LoadScene("OxygenDepleted");
+        levelLoad.LoadOxygenDepleted();
     }
 
     // Method to set the current oxygen level

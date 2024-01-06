@@ -7,6 +7,7 @@ public class HealthBar : MonoBehaviour
 {
     private int _health = 100;
     public Slider healthSlider; // Reference to the Slider component for the health bar
+    public LevelLoad levelLoad;
 
     public int Health
     {
@@ -28,7 +29,7 @@ public class HealthBar : MonoBehaviour
             // Check if health is 0 or less to handle player death
             if (_health <= 0)
             {
-                SceneManager.LoadScene("DeathScene");
+                levelLoad.LoadDeathScene();
             }
         }
     }
