@@ -3,7 +3,12 @@ guid: c99ceae9a7639c24ea847408b9343197
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Coral
+    second: {fileID: 2100000, guid: e6b78a742dfdc2445a1367c09a512da7, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -88,7 +93,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.07
+    globalScale: 7
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
