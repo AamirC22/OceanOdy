@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -463,9 +463,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 158318361}
-        m_TargetAssemblyTypeName: RestartGame, Assembly-CSharp
-        m_MethodName: RestartTheGame
+      - m_Target: {fileID: 1490558547}
+        m_TargetAssemblyTypeName: LevelLoad, Assembly-CSharp
+        m_MethodName: LoadMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -537,6 +537,68 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf9f6648a5943f547b6d049bee28955e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &458163450
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6098995592951610505, guid: e306745fe2258da4da920fe3b5aeb81a, type: 3}
+      propertyPath: m_Name
+      value: LevelLoader 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104106495955100354, guid: e306745fe2258da4da920fe3b5aeb81a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 559.65045
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104106495955100354, guid: e306745fe2258da4da920fe3b5aeb81a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 216.71472
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104106495955100354, guid: e306745fe2258da4da920fe3b5aeb81a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.4784185
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104106495955100354, guid: e306745fe2258da4da920fe3b5aeb81a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104106495955100354, guid: e306745fe2258da4da920fe3b5aeb81a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104106495955100354, guid: e306745fe2258da4da920fe3b5aeb81a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104106495955100354, guid: e306745fe2258da4da920fe3b5aeb81a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104106495955100354, guid: e306745fe2258da4da920fe3b5aeb81a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104106495955100354, guid: e306745fe2258da4da920fe3b5aeb81a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104106495955100354, guid: e306745fe2258da4da920fe3b5aeb81a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e306745fe2258da4da920fe3b5aeb81a, type: 3}
+--- !u!95 &458163451 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8014950356894576465, guid: e306745fe2258da4da920fe3b5aeb81a, type: 3}
+  m_PrefabInstance: {fileID: 458163450}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &468520411
 GameObject:
   m_ObjectHideFlags: 0
@@ -1409,6 +1471,7 @@ GameObject:
   - component: {fileID: 1490558543}
   - component: {fileID: 1490558542}
   - component: {fileID: 1490558546}
+  - component: {fileID: 1490558547}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1512,9 +1575,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   showPauseMenu: {fileID: 0}
-  showOxygenBar: {fileID: 0}
+  oxygenBarFill: {fileID: 0}
+  oxygenBarOutline: {fileID: 0}
+  oxygenBarIcon: {fileID: 0}
   showHealthBar: {fileID: 0}
   showCoins: {fileID: 0}
+  settingsPanel: {fileID: 0}
+  settingsBTN: {fileID: 0}
+--- !u!114 &1490558547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1490558541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a88b17c744a18940b71acdee81895dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newTransition: {fileID: 458163451}
 --- !u!1 &2041172490
 GameObject:
   m_ObjectHideFlags: 0
@@ -1658,3 +1738,4 @@ SceneRoots:
   - {fileID: 1490558545}
   - {fileID: 36172935}
   - {fileID: 594452974}
+  - {fileID: 458163450}
