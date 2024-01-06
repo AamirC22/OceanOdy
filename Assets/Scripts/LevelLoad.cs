@@ -15,7 +15,7 @@ public class LevelLoad : MonoBehaviour
     IEnumerator waitForAnimation(string ChosenLevel)
     {
         newTransition.SetTrigger("start");
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
         SceneManager.LoadScene(chosenLevel);
     }
 }
