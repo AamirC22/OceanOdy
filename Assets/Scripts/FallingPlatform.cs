@@ -7,7 +7,7 @@ public class FallingPlatform : MonoBehaviour
     bool isFalling = false;
     float downSpeed = 0;
     Vector3 originalPosition;
-    float timeToReset = 10.0f; // Adjust this to control how long it takes to reset the platform.
+    float timeToReset = 10.0f;
     float timer = 0.0f;
 
     void Start()
@@ -15,7 +15,7 @@ public class FallingPlatform : MonoBehaviour
         originalPosition = transform.position;
     }
 
-    void OnTriggerEnter(Collider collider)
+    void OnTriggerEnter(Collider collider) // checks if player collided with platform
     {
         if (collider.CompareTag("Gamer"))
         {
@@ -25,12 +25,12 @@ public class FallingPlatform : MonoBehaviour
 
     void Update()
     {
-        if (isFalling)
+        if (isFalling) // checks if platform is falling after player collides, transforms position
         {
             downSpeed += Time.deltaTime / 20;
             transform.position = new Vector3(transform.position.x, transform.position.y - downSpeed, transform.position.z);
 
-            if (transform.position.y < originalPosition.y - 50.0f) // Adjust -2.0f to your desired falling distance.
+            if (transform.position.y < originalPosition.y - 50.0f)
             {
                 isFalling = false;
                 downSpeed = 0;
@@ -42,8 +42,7 @@ public class FallingPlatform : MonoBehaviour
         }
         else
         {
-            // Reset the platform to its original position.
-            transform.position = originalPosition;
+            transform.position = originalPosition; // brings platform back to original position
             timer = 0.0f;
         }
     }

@@ -8,7 +8,6 @@ public class Patrol : MonoBehaviour
     public float knockbackStrength = 10f;
     public Transform[] waypoints;
     public HealthBar playerHealthBar;
-
     private int currentWaypointIndex = 0;
     private bool movingForward = true;
     private float timeSinceLastHit = 0f; 
@@ -22,8 +21,6 @@ public class Patrol : MonoBehaviour
 
         Transform targetWaypoint = waypoints[currentWaypointIndex];
         transform.position = Vector3.MoveTowards(transform.position, targetWaypoint.position, speed * Time.deltaTime);
-
-        // Check if the stingray has reached the waypoint
         if (transform.position == targetWaypoint.position)
         {
             if (movingForward)
@@ -59,66 +56,32 @@ public class Patrol : MonoBehaviour
             Quaternion lookRotation = Quaternion.LookRotation(direction);
             transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * speed);
         }
-
-        // Increment the time since last hit
         if (timeSinceLastHit < hitCooldown)
         {
             timeSinceLastHit += Time.deltaTime;
         }
-
-        // Increment the time since last knockback
         if (timeSinceLastKnockback < knockbackCooldown)
         {
             timeSinceLastKnockback += Time.deltaTime;
         }
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision collision) // Checks if player collides with enemy, if collided - health decreases
     {
-        Debug.Log("Collision Detected with: " + collision.gameObject.name);
-
         if (collision.gameObject.tag == "Gamer")
         {
-            Debug.Log("It's the player!");
-
             Rigidbody playerRigidbody = collision.gameObject.GetComponent<Rigidbody>();
-            if (playerRigidbody != null)
-            {
-                // Check if cooldown has passed before applying damage and knockback again
-                if (timeSinceLastHit >= hitCooldown && timeSinceLastKnockback >= knockbackCooldown)
-                {
-                    if (playerHealthBar != null)
-                    {
-                        playerHealthBar.Health -= 25;
-                        Debug.Log("Player health after hit: " + playerHealthBar.Health);
-
-                        // Calculate and apply knockback force
-                        Vector3 knockbackDirection = (collision.transform.position - transform.position).normalized;
-                        knockbackDirection.y = 0; // knockback is only applied to horizontal plane
-                        playerRigidbody.AddForce(knockbackDirection * knockbackStrength, ForceMode.Impulse);
-
-                        // Reset the timers
-                        timeSinceLastHit = 0f;
-                        timeSinceLastKnockback = 0f;
-                    }
-                    else
-                    {
-                        Debug.LogError("PlayerHealthBar reference is not set in the Patrol script.");
-                    }
-                }
-                else
-                {
-                    Debug.Log("Cooldown in progress. Time since last hit: " + timeSinceLastHit + ", Time since last knockback: " + timeSinceLastKnockback);
-                }
-            }
-            else
-            {
-                Debug.LogError("No Rigidbody component found on the player!");
-            }
+            playerHealthBar.Health -= 25;
+            Vector3 knockbackDirection = (collision.transform.position - transform.position).normalized;
+            knockbackDirection.y = 0;
+            playerRigidbody.AddForce(knockbackDirection * knockbackStrength, ForceMode.Impulse);
+            timeSinceLastHit = 0f;
+            timeSinceLastKnockback = 0f;
+           
         }
         else
         {
-            Debug.Log("Collision with non-player object.");
+            Debug.Log("Collided with non player object.");
         }
     }
 }

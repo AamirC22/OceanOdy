@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 public class CoinCount : MonoBehaviour
 {
     public int coinCount = 0;
-    //public TextMeshProUGUI coinCountText;
     public static CoinCount Instance;
     public LevelLoad levelLoad;
 
@@ -20,7 +19,7 @@ public class CoinCount : MonoBehaviour
 
     void Update()
     {
-        if (coinCount == 4)
+        if (coinCount == 4) // checks if coin count is 4 then loads according level
         {
             if (SceneManager.GetActiveScene().name == "Platform1")
             {
@@ -33,15 +32,14 @@ public class CoinCount : MonoBehaviour
         }
     }
 
-    public void UpdateCoinCount(int value)
+    public void UpdateCoinCount(int value) // plays sound when coin collected and increases count
     {
         CoinSound.Play();
         coinCount += value;
-        //coinCountText.text = "Coins: " + coinCount.ToString("D1") + " /4";
         UpdateCoinUI(); // Update the coin UI whenever the coin count changes
     }
 
-    private void UpdateCoinUI()
+    private void UpdateCoinUI() // updates UI if coin count changed
     {
         for (int i = 0; i < coinImages.Length; i++)
         {

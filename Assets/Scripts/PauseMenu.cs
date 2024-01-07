@@ -16,10 +16,9 @@ public class PauseMenu : MonoBehaviour
     public GameObject settingsPanel;
     public GameObject settingsBTN;
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.P)) // trigger to show pause menu , checks if settings menu already pressed
         {
             if (isGamePaused)
             {
@@ -43,25 +42,25 @@ public class PauseMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         showPauseMenu.SetActive(false);
         showHealthBar.SetActive(true);
-        SetImageEnabled(oxygenBarFill.GetComponent<Image>(), true); // makes oxygen bar visible
-        SetImageEnabled(oxygenBarOutline.GetComponent<Image>(), true); //
-        SetImageEnabled(oxygenBarIcon.GetComponent<Image>(), true); //
+        SetImageEnabled(oxygenBarFill.GetComponent<Image>(), true); // makes oxygen bar fill visible
+        SetImageEnabled(oxygenBarOutline.GetComponent<Image>(), true); // makes oxygen bar outline visible
+        SetImageEnabled(oxygenBarIcon.GetComponent<Image>(), true); // shows oxygen icon 
         showCoins.SetActive(true);
-        Time.timeScale = 1f;
+        Time.timeScale = 1f; // makes time restart in the game again
         isGamePaused = false;
     }
 
-    void pauseGame()
+    void pauseGame() // switches visibility of oxygen bar and health bar, makes pause menu visible
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         showPauseMenu.SetActive(true);
         showHealthBar.SetActive(false);
         SetImageEnabled(oxygenBarFill.GetComponent<Image>(), false); // makes oxygen bar invisible
-        SetImageEnabled(oxygenBarOutline.GetComponent<Image>(), false); //
-        SetImageEnabled(oxygenBarIcon.GetComponent<Image>(), false); //
+        SetImageEnabled(oxygenBarOutline.GetComponent<Image>(), false); // makes oxygen bar outline invisible
+        SetImageEnabled(oxygenBarIcon.GetComponent<Image>(), false); //hides oxygen icon 
         showCoins.SetActive(false);
-        Time.timeScale = 0f;
+        Time.timeScale = 0f; // freezes time
         isGamePaused = true;
     }
 
@@ -70,13 +69,13 @@ public class PauseMenu : MonoBehaviour
         image.enabled = isEnabled;
     }
 
-    public void loadMainMenu()
+    public void loadMainMenu() // loads main menu if main menu button pressed
     {
         resumeGame();
         SceneManager.LoadScene("MainMenu");
     }
 
-    public void QuitGame()
+    public void QuitGame() // exits game
     {
         Application.Quit();
 

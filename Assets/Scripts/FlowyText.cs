@@ -6,7 +6,7 @@ using TMPro;
 public class FlowyText : MonoBehaviour
 {
     public TMP_Text textComponent;
-    void Update()
+    void Update() // makes text move in a way that has a flow effect like water
     {
         textComponent.ForceMeshUpdate();
         var textInfo = textComponent.textInfo;

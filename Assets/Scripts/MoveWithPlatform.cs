@@ -14,16 +14,15 @@ public class MoveWithPlatform : MonoBehaviour
 
     private bool isPlayerOnPlatform = false;
 
-    void OnTriggerEnter(Collider collider)
+    void OnTriggerEnter(Collider collider) // Checks if player enters the platform box collider, sets variable to true
     {
         if (collider.CompareTag("Gamer"))
         {
             isPlayerOnPlatform = true;
-            UnityEngine.Debug.Log("Gamer collided with Horizontal Cube");
         }
     }
 
-    void OnTriggerExit(Collider collider)
+    void OnTriggerExit(Collider collider) // Checks if player enters the platform box collider, sets variable to false
     {
         if (collider.CompareTag("Gamer"))
         {
@@ -31,7 +30,7 @@ public class MoveWithPlatform : MonoBehaviour
         }
     }
 
-    void Update()
+    void Update() // Checks if player is on platform
     {
         if (isPlayerOnPlatform)
         {

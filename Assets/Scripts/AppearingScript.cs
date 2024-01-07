@@ -13,6 +13,7 @@ public class AppearingScript : MonoBehaviour
         StartCoroutine(FadeInOutPeriodically());
     }
 
+    // Method to fade out and fade in
     IEnumerator FadeInOutPeriodically()
     {
         while (true)
@@ -26,6 +27,7 @@ public class AppearingScript : MonoBehaviour
         }
     }
 
+    // changes alpha of the platform to make it fade
     private IEnumerator FadeRoutine(float targetAlpha)
     {
         bool isFading = true;

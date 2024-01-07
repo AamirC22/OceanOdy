@@ -6,11 +6,10 @@ using UnityEngine.UI;
 
 public class OxygenBar : MonoBehaviour
 {
-    public Slider slider; // Reference to the Slider component
+    public Slider slider; // Reference to the Slider component - used for UI
     public TextMeshProUGUI oxygenText;
     public LevelLoad levelLoad;
 
-    // Start is called before the first frame update
     void Start()
     {
         SetMaxOxygen(750); // Set the maximum (starting) oxygen level
@@ -32,7 +31,6 @@ public class OxygenBar : MonoBehaviour
     public void SetOxygen(int oxygen)
     {
         slider.value = oxygen;
-        //UpdateOxygenText(); // Update the oxygen text
     }
 
     // Method to set the maximum oxygen level
@@ -40,65 +38,5 @@ public class OxygenBar : MonoBehaviour
     {
         slider.maxValue = oxygen;
         slider.value = oxygen;
-        //UpdateOxygenText(); // Update the oxygen text
-    }
-
-    // Method to update the oxygen text
-    private void UpdateOxygenText()
-    {
-        oxygenText.text = "Oxygen: " + slider.value.ToString();
     }
 }
-
-
-/*
-// Oxygen level variables
-private float oxygen;
-private float maxOxygen = 1000f;
-private float oxygenDecreaseRate = 100f; // Amount of oxygen to decrease per second
-
-// UI elements for oxygen
-public TextMeshProUGUI OxygenBarText;
-public Image oxygenBar; // Reference to the Image component representing the oxygen bar
-public Text oxygenText; // Reference to the Text component displaying the oxygen level as text
-
-private void Start()
-{
-    // Set the initial oxygen level
-    oxygen = maxOxygen;
-
-    // Start the coroutine to decrease oxygen over time
-    StartCoroutine(DecreaseOxygen());
-}
-
-private void Update()
-{
-    // Update the UI elements every frame
-    oxygenText.text = "Oxygen: " + Mathf.RoundToInt(oxygen) + "%";
-    oxygenBar.fillAmount = oxygen / maxOxygen;
-}
-
-private IEnumerator DecreaseOxygen()
-{
-    // Loop as long as there is oxygen remaining
-    while (oxygen > 0)
-    {
-        // Decrease the oxygen level
-        oxygen -= oxygenDecreaseRate;
-        yield return new WaitForSecondsRealtime(1f);
-
-        // Check if oxygen has run out
-        if (oxygen <= 0)
-        {
-            // Load the scene for when oxygen is depleted
-            SceneManager.LoadScene("OxygenDepleted");
-        }
-    }
-}
-
-// Optional: Function to decrease oxygen from other sources (e.g., enemy attack)
-public void LoseOxygen(float decreaseAmount)
-{
-    oxygen = Mathf.Max(oxygen - decreaseAmount, 0); // Ensure oxygen does not go below zero
-}
-*/

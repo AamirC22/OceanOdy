@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class HealthBar : MonoBehaviour
 {
     private int _health = 100;
-    public Slider healthSlider; // Reference to the Slider component for the health bar
+    public Slider healthSlider;
     public LevelLoad levelLoad;
 
     public int Health
@@ -14,19 +14,19 @@ public class HealthBar : MonoBehaviour
         get { return _health; }
         set
         {
-            _health = Mathf.Max(value, 0); // Ensure health doesn't go below 0
+            _health = Mathf.Max(value, 0);
 
-            // Check if healthSlider is not null before trying to set its value
+            // checks if slider has error
             if (healthSlider != null)
             {
-                healthSlider.value = _health; // Update the slider's value when the health changes
+                healthSlider.value = _health; // updates slider if health changed
             }
             else
             {
-                Debug.LogError("Health slider reference is null.");
+                Debug.LogError("Health slider reference is null");
             }
 
-            // Check if health is 0 or less to handle player death
+            // if health below or equal to 0, loads death scene
             if (_health <= 0)
             {
                 levelLoad.LoadDeathScene();
@@ -34,17 +34,17 @@ public class HealthBar : MonoBehaviour
         }
     }
 
-    void Start()
+    void Start() // sets values for health , checks for errors with slider
     {
         // Check if healthSlider is not null before setting its maxValue and value
         if (healthSlider == null)
         {
-            Debug.LogError("HealthBar Error: Slider component not found on " + gameObject.name);
+            Debug.LogError("Health slider reference is null");
         }
         else
         {
-            healthSlider.maxValue = _health; // Set the slider's max value to the player's max health
-            healthSlider.value = _health; // Set the slider's current value to the player's current health
+            healthSlider.maxValue = _health; // Set slider's max value to player's max health
+            healthSlider.value = _health; // Set slider's current value to player's current health
         }
 
     }

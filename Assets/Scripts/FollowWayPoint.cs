@@ -12,7 +12,7 @@ public class FollowWayPoint : MonoBehaviour
 
     [SerializeField] float speed = 1f;
 
-    // Update is called once per frame
+    // transforms player position based on waypoint
     void Update()
     {
         if (Vector3.Distance(transform.position, waypoints[currentWaypointIndex].transform.position) < .1f)
