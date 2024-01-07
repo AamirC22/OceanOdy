@@ -32,17 +32,17 @@ https://aamirc22.github.io/OceanOdy/build/index.html
 ## Assets
 
 Here is a list of assets we used in the development of the game:
-AQUAS-Lite: https://assetstore.unity.com/packages/vfx/shaders/aquas-lite-built-in-render-pipeline-53519    
-AquaticModels: https://rkuhlf-assets.itch.io/aquatic-animal-models    
-Underwater Blues: https://assetstore.unity.com/packages/audio/music/electronic/underwater-blues-125925    
-Adventure Music and SFX: https://assetstore.unity.com/packages/audio/music/adventure-music-and-sfx-221545    
-8-Bit SFX: https://assetstore.unity.com/packages/audio/sound-fx/8-bit-sfx-32831    
-Ground: Earth and Rocks: https://assetstore.unity.com/packages/2d/textures-materials/nature/ground-earth-and-rocks-free-texture-b-hand-painted-235784    
-FREE Stylized PBR Textures Pack: https://assetstore.unity.com/packages/2d/textures-materials/free-stylized-pbr-textures-pack-111778    
-Hand Painted Nature Kit Lite: https://assetstore.unity.com/packages/3d/environments/hand-painted-nature-kit-lite-69220     
-Horror Chase & Ambience Music: https://assetstore.unity.com/packages/audio/music/horror-chase-ambience-music-210570    
-Poly Haven materials and textures: https://polyhaven.com/    
-Free UI Click Sound Pack: https://assetstore.unity.com/packages/audio/sound-fx/free-ui-click-sound-pack-244644    
-Free Sci-Fi and CyberPunk Music Pack: https://assetstore.unity.com/packages/audio/ambient/sci-fi/free-sci-fi-and-cyberpunk-music-pack-264590    
-FREE Casual Game SFX Pack: https://assetstore.unity.com/packages/audio/sound-fx/free-casual-game-sfx-pack-54116    
-DavePixel Pirate Coin: https://assetstore.unity.com/packages/3d/props/pirate-coin-207743    
+- AQUAS-Lite: https://assetstore.unity.com/packages/vfx/shaders/aquas-lite-built-in-render-pipeline-53519    
+- AquaticModels: https://rkuhlf-assets.itch.io/aquatic-animal-models    
+- Underwater Blues: https://assetstore.unity.com/packages/audio/music/electronic/underwater-blues-125925    
+- Adventure Music and SFX: https://assetstore.unity.com/packages/audio/music/adventure-music-and-sfx-221545    
+- 8-Bit SFX: https://assetstore.unity.com/packages/audio/sound-fx/8-bit-sfx-32831    
+- Ground: Earth and Rocks: https://assetstore.unity.com/packages/2d/textures-materials/nature/ground-earth-and-rocks-free-texture-b-hand-painted-235784    
+- FREE Stylized PBR Textures Pack: https://assetstore.unity.com/packages/2d/textures-materials/free-stylized-pbr-textures-pack-111778    
+- Hand Painted Nature Kit Lite: https://assetstore.unity.com/packages/3d/environments/hand-painted-nature-kit-lite-69220     
+- Horror Chase & Ambience Music: https://assetstore.unity.com/packages/audio/music/horror-chase-ambience-music-210570    
+- Poly Haven materials and textures: https://polyhaven.com/    
+- Free UI Click Sound Pack: https://assetstore.unity.com/packages/audio/sound-fx/free-ui-click-sound-pack-244644    
+- Free Sci-Fi and CyberPunk Music Pack: https://assetstore.unity.com/packages/audio/ambient/sci-fi/free-sci-fi-and-cyberpunk-music-pack-264590    
+- FREE Casual Game SFX Pack: https://assetstore.unity.com/packages/audio/sound-fx/free-casual-game-sfx-pack-54116    
+- DavePixel Pirate Coin: https://assetstore.unity.com/packages/3d/props/pirate-coin-207743    
