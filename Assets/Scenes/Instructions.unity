@@ -1213,7 +1213,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6098995592951610505, guid: e306745fe2258da4da920fe3b5aeb81a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8282135109807911447, guid: e306745fe2258da4da920fe3b5aeb81a, type: 3}
       propertyPath: m_SortingOrder
@@ -1878,12 +1878,12 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.9058824, g: 0.7411765, b: 0.53333336, a: 0.72156864}
-    m_HighlightedColor: {r: 0.9058824, g: 0.74509805, b: 0.53333336, a: 0.34509805}
+    m_NormalColor: {r: 0.9058824, g: 0.7411765, b: 0.53333336, a: 1}
+    m_HighlightedColor: {r: 0.53333336, g: 0.6766068, b: 0.90588236, a: 0.34509805}
     m_PressedColor: {r: 0.9058824, g: 0.7372549, b: 0.53333336, a: 0}
     m_SelectedColor: {r: 0.8941177, g: 0.76470596, b: 0.5254902, a: 0.30588236}
     m_DisabledColor: {r: 0.8705883, g: 0.70980394, b: 0.48627454, a: 0.5019608}
-    m_ColorMultiplier: 1
+    m_ColorMultiplier: 2.07
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
@@ -1938,7 +1938,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0}
+  m_Color: {r: 0.8941177, g: 0.75294125, b: 0.5176471, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
