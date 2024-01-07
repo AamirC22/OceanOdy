@@ -38,13 +38,13 @@ public class PlayerCam : MonoBehaviour
         orientation.rotation = Quaternion.Euler(0, yRotation, 0);
     }
 
-    public void OnXChanged()
+    public void OnXChanged()  // changes sesitivity x
     {
         sensX = XSlider.value;
         PlayerPrefs.SetFloat("XSens", sensX);
     }
 
-    public void OnYChanged()
+    public void OnYChanged() // changes sensitivity y
     {
         sensY = YSlider.value;
         PlayerPrefs.SetFloat("YSens", sensY);

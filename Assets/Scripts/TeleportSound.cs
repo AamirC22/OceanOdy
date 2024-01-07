@@ -8,11 +8,9 @@ public class TeleportSound : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // Check if the collider belongs to the player
         if (other.CompareTag("Gamer"))
         {
-            // Play the teleport sound effect
-            teleportSound.Play();
+            teleportSound.Play(); // plays sound effect
         }
     }
 }

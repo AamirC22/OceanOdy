@@ -15,11 +15,11 @@ public class Sprint : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void Update() 
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.LeftShift)) // if left shift held down
             basicScript.moveSpeed += SprintSpeed;
-        else if (Input.GetKeyUp(KeyCode.LeftShift))
+        else if (Input.GetKeyUp(KeyCode.LeftShift)) // if player let go of left shift
             basicScript.moveSpeed -= SprintSpeed;
     }
 }

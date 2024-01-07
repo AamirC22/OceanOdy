@@ -11,7 +11,7 @@ public class Teleporter : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Teleporter"))
         {
-            Player.transform.position = TeleportTo.transform.position;
+            Player.transform.position = TeleportTo.transform.position; // teleports player to new position
         }
     }
 }

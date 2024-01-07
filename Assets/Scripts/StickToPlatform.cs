@@ -12,8 +12,7 @@ public class StickToPlatform : MonoBehaviour
     {
         if (collider.CompareTag("Gamer"))
         {
-            //set playerObject as child of parentObject
-            playerObject.transform.parent = platformObject.transform;
+            playerObject.transform.parent = platformObject.transform; 
             UnityEngine.Debug.Log("Gamer collided with Horizontal Cube");
         }
     }

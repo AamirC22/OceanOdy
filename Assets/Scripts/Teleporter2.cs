@@ -9,9 +9,9 @@ public class Teleporter2 : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.CompareTag("Teleporter2"))
+        if (collision.gameObject.CompareTag("Teleporter2")) 
         {
-            Player.transform.position = TeleportTo.transform.position;
+            Player.transform.position = TeleportTo.transform.position; // sets player to new position after teleport
         }
     }
 }

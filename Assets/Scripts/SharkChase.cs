@@ -34,12 +34,12 @@ public class SharkChase : MonoBehaviour
         float distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);
         float distanceToPlayerFromOriginalPosition = Vector3.Distance(player.transform.position, originalPosition);
 
-        // If the player is within chase range and the shark is not currently chasing
+        // if the player is within chase range and the shark is not currently chasing
         if (distanceToPlayerFromOriginalPosition <= chaseTriggerDistance && !isChasing)
         {
             StartChase();
         }
-        // If the player is outside chase range and the shark is currently chasing
+        // if the player is outside chase range and the shark is currently chasing
         else if (distanceToPlayerFromOriginalPosition > chaseTriggerDistance && isChasing)
         {
             StopChase();
@@ -47,19 +47,19 @@ public class SharkChase : MonoBehaviour
 
         if (isChasing)
         {
-            if (distanceToPlayer > bitingRange) // Check if outside of biting range
+            if (distanceToPlayer > bitingRange) // check if outside of biting range
             {
                 MoveTowards(player.transform.position);
             }
             else
             {
-                // If within biting range, reduce health to 0 and trigger death
+                // if within biting range, reduce health to 0 and trigger death
                 playerHealthBar.Health = 0;
             }
         }
         else
         {
-            // When not chasing, return to the original position
+            // when not chasing, return to the original position
             if ((transform.position - originalPosition).sqrMagnitude > 0.1f)
             {
                 MoveTowards(originalPosition);
@@ -71,7 +71,7 @@ public class SharkChase : MonoBehaviour
         }
     }
 
-    void StartChase()
+    void StartChase() // plays music for chasing and sets chasing to true
     {
         isChasing = true;
         normalMusic.Stop();
@@ -79,7 +79,7 @@ public class SharkChase : MonoBehaviour
         horrorMusic.Play(); 
     }
 
-    void StopChase()
+    void StopChase() // stops music for chasing and sets chasing to false
     {
         isChasing = false;
         horrorMusic.Stop(); 
@@ -89,18 +89,17 @@ public class SharkChase : MonoBehaviour
 
 
 
-    void LookAtLastKnownPlayerPosition()
+    void LookAtLastKnownPlayerPosition() // faces the shark to player
     {
         Vector3 directionToPlayer = (player.transform.position - transform.position).normalized;
         if (directionToPlayer != Vector3.zero)
         {
             Quaternion lookRotation = Quaternion.LookRotation(directionToPlayer);
-            // Rotate over time based on chaseSpeed to make it smooth
             transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * chaseSpeed);
         }
     }
 
-    void MoveTowards(Vector3 target)
+    void MoveTowards(Vector3 target) // shark moves towards player 
     {
         transform.position = Vector3.MoveTowards(transform.position, target, chaseSpeed * Time.deltaTime);
 

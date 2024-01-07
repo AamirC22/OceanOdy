@@ -16,14 +16,14 @@ public class VolumeSettings : MonoBehaviour
 
     void Start()
     {
-        float savedMusicVolume = PlayerPrefs.GetFloat("musicVolume", 1f); 
+        float savedMusicVolume = PlayerPrefs.GetFloat("musicVolume", 1f);  // sets music volume to what player adjusted it to
         volumeSlider.value = savedMusicVolume;
         foreach (AudioSource musicSource in musicAudioSources)
         {
             musicSource.volume = savedMusicVolume; 
         }
 
-        float savedSFXVolume = PlayerPrefs.GetFloat("sfxVolume", 1f); 
+        float savedSFXVolume = PlayerPrefs.GetFloat("sfxVolume", 1f); // sets SFX volume to what player adjusted it to
         sfxSlider.value = savedSFXVolume;
         foreach (AudioSource sfxSource in sfxAudioSources)
         {
@@ -35,7 +35,7 @@ public class VolumeSettings : MonoBehaviour
     }
 
 
-    public void OnMusicVolumeChanged()
+    public void OnMusicVolumeChanged() // updates music volume
     {
         float newVolume = volumeSlider.value;
         Debug.Log("Music volume changed to: " + newVolume);
@@ -50,7 +50,7 @@ public class VolumeSettings : MonoBehaviour
         PlayerPrefs.SetFloat("musicVolume", newVolume);
     }
 
-    public void OnSFXVolumeChanged()
+    public void OnSFXVolumeChanged() // updates the SFX volume
     {
         foreach (AudioSource sfxSource in sfxAudioSources)
         {
@@ -62,13 +62,13 @@ public class VolumeSettings : MonoBehaviour
         }
     }
 
-    public void ShowSettingsPage()
+    public void ShowSettingsPage() // shows setting page
     {
         settingsPanel.SetActive(true);
         settingsBTN.SetActive(false);
         PauseMenu.SetActive(false);
     }
-    public void CloseSettingsPage()
+    public void CloseSettingsPage() // closes setting page
     {
         settingsPanel.SetActive(false);
         settingsBTN.SetActive(true);

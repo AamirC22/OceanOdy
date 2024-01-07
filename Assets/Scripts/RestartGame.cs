@@ -10,12 +10,12 @@ public class RestartGame : MonoBehaviour
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.Confined;
     }
-    public void RestartTheGame()
+    public void RestartTheGame() // loads level 1
     {
         SceneManager.LoadScene("Platform1");
     }
 
-    public void ShowGameInstructions()
+    public void ShowGameInstructions() // shows instructions
     {
         SceneManager.LoadScene("Instructions");
     }
