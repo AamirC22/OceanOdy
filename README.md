@@ -23,6 +23,12 @@ Welcome to **Ocean Odyssey: Treasures of the Deep**, an exciting 3D platformer t
 
 5. **Sharks** Beware of sharks that will chase you. If they manage to bite you it will result in instant death.
 
+   
+## Game Access
+
+To play the game, visit the following link:
+https://aamirc22.github.io/OceanOdy/build/index.html
+
 ## Assets
 
 Here is a list of assets we used in the development of the game:
@@ -40,8 +46,3 @@ Free UI Click Sound Pack: https://assetstore.unity.com/packages/audio/sound-fx/f
 Free Sci-Fi and CyberPunk Music Pack: https://a    ssetstore.unity.com/packages/audio/ambient/sci-fi/free-sci-fi-and-cyberpunk-music-pack-264590
 FREE Casual Game SFX Pack: https://assetstore.unity.com/packages/audio/sound-fx/free-casual-game-sfx-pack-54116
 DavePixel Pirate Coin: https://assetstore.unity.com/packages/3d/props/pirate-coin-207743
-
-## Game Access
-
-To play the game, visit the following link:
-https://aamirc22.github.io/OceanOdy/build/index.html
