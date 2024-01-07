@@ -319,7 +319,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4, y: -55}
+  m_AnchoredPosition: {x: 0, y: -70}
   m_SizeDelta: {x: 196.3867, y: 57.29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &158318357
@@ -547,6 +547,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelLoader 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6098995592951610505, guid: e306745fe2258da4da920fe3b5aeb81a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9104106495955100354, guid: e306745fe2258da4da920fe3b5aeb81a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 559.65045
@@ -631,7 +635,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -75, y: -11}
+  m_AnchoredPosition: {x: -52, y: 0}
   m_SizeDelta: {x: 399.5294, y: 135.844}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &744727521
@@ -765,7 +769,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -192, y: 120}
+  m_AnchoredPosition: {x: -192, y: 52}
   m_SizeDelta: {x: 260.3228, y: 52.3201}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &877783408
@@ -1135,7 +1139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -1298,7 +1302,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newTransition: {fileID: 512189410}
-  chosenLevel: 
 --- !u!1 &2041172490
 GameObject:
   m_ObjectHideFlags: 0

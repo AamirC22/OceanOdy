@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -416,7 +416,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -153, y: -103.7}
+  m_AnchoredPosition: {x: -114, y: -72}
   m_SizeDelta: {x: 196.3867, y: 57.29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &158318358
@@ -548,6 +548,10 @@ PrefabInstance:
     - target: {fileID: 6098995592951610505, guid: e306745fe2258da4da920fe3b5aeb81a, type: 3}
       propertyPath: m_Name
       value: LevelLoader 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6098995592951610505, guid: e306745fe2258da4da920fe3b5aeb81a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9104106495955100354, guid: e306745fe2258da4da920fe3b5aeb81a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -849,7 +853,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 144, y: -103.7}
+  m_AnchoredPosition: {x: 143, y: -75}
   m_SizeDelta: {x: 196.3867, y: 57.29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &590081915
@@ -1130,11 +1134,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 468520412}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5162827, y: 0.89000005}
-  m_AnchorMax: {x: 0.5162827, y: 0.89000005}
-  m_AnchoredPosition: {x: 462, y: -107}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 483, y: -116}
   m_SizeDelta: {x: 399.5294, y: 135.844}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &744727521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1266,7 +1270,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1051.8386, y: -54}
+  m_AnchoredPosition: {x: -1035, y: -29}
   m_SizeDelta: {x: 260.3228, y: 52.3201}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &877783408
@@ -1508,7 +1512,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
