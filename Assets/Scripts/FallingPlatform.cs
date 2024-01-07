@@ -25,9 +25,10 @@ public class FallingPlatform : MonoBehaviour
 
     void Update()
     {
-        if (isFalling) // checks if platform is falling after player collides, transforms position
+        if (isFalling)
         {
-            downSpeed += Time.deltaTime / 20;
+            
+            downSpeed += Time.deltaTime / 40; // time platform takes to start falling
             transform.position = new Vector3(transform.position.x, transform.position.y - downSpeed, transform.position.z);
 
             if (transform.position.y < originalPosition.y - 50.0f)
@@ -42,8 +43,9 @@ public class FallingPlatform : MonoBehaviour
         }
         else
         {
-            transform.position = originalPosition; // brings platform back to original position
+            transform.position = originalPosition; // brings the platform back to original position
             timer = 0.0f;
         }
     }
+
 }
