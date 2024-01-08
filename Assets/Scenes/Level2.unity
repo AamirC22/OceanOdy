@@ -10204,8 +10204,8 @@ Transform:
   m_GameObject: {fileID: 762975574}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6191.1274, y: 459.2, z: 2715.1064}
-  m_LocalScale: {x: 100000, y: -25.9, z: 100000}
+  m_LocalPosition: {x: 3166, y: 45.9, z: 1330}
+  m_LocalScale: {x: 9420, y: -25.9, z: 5376}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -17141,7 +17141,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.1
-  far clip plane: 5000
+  far clip plane: 5000.01
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -23360,9 +23360,9 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.01
+  near clip plane: 0.3
   far clip plane: 5000
-  field of view: 60
+  field of view: 70
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -26987,6 +26987,7 @@ MonoBehaviour:
   - {fileID: 356955068}
   - {fileID: 863274467}
   - {fileID: 369408767}
+  - {fileID: 1430977145}
   musicAudioSources:
   - {fileID: 1466506028}
   - {fileID: 169651326}
