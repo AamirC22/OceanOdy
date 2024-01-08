@@ -32,7 +32,7 @@ https://aamirc22.github.io/OceanOdy/build/index.html
 ## Assets
 
 Here is a list of assets we used in the development of the game:
-- AQUAS-Lite: https://assetstore.unity.com/packages/vfx/shaders/aquas-lite-built-in-render-pipeline-53519    
+- Mixamo Character: https://www.mixamo.com/#/?page=1&type=Characterhttps://www.mixamo.com/#/?page=1&type=Character
 - AquaticModels: https://rkuhlf-assets.itch.io/aquatic-animal-models    
 - Underwater Blues: https://assetstore.unity.com/packages/audio/music/electronic/underwater-blues-125925    
 - Adventure Music and SFX: https://assetstore.unity.com/packages/audio/music/adventure-music-and-sfx-221545    
