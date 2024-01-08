@@ -306,13 +306,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 12287853}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0.25, z: 0.35}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1430977151}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &17055994
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,7 +656,7 @@ Transform:
   m_GameObject: {fileID: 35695686}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 0.22, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -692,7 +692,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 35695686}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -2759,7 +2759,7 @@ MonoBehaviour:
   waypoints:
   - {fileID: 934965006}
   - {fileID: 93149345}
-  playerHealthBar: {fileID: 0}
+  playerHealthBar: {fileID: 383214570}
   hitCooldown: 3
   knockbackCooldown: 1
 --- !u!54 &255290298
@@ -13005,28 +13005,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 936848612}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &938928897 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 623270196f671c64793b11a0edcc3d3c, type: 3}
-  m_PrefabInstance: {fileID: 1433567665}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &938928898 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 623270196f671c64793b11a0edcc3d3c, type: 3}
-  m_PrefabInstance: {fileID: 1433567665}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &938928899
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 938928897}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6ad6074a47ba1b478017a107650c0cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &943507394
 GameObject:
   m_ObjectHideFlags: 0
@@ -13515,7 +13493,7 @@ MonoBehaviour:
   chaseSpeed: 10
   chaseTriggerDistance: 290
   bitingRange: 35
-  playerHealthBar: {fileID: 0}
+  playerHealthBar: {fileID: 383214570}
   normalMusic: {fileID: 1466506028}
   horrorMusic: {fileID: 169651326}
 --- !u!1001 &977152320
@@ -16583,7 +16561,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.1
+  near clip plane: 5000
   far clip plane: 5000.01
   field of view: 60
   orthographic: 0
@@ -18782,7 +18760,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c2f8b37ce65e14bb6ec28e69c05265, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthSlider: {fileID: 0}
+  healthSlider: {fileID: 383214569}
   levelLoad: {fileID: 0}
 --- !u!82 &1430977145
 AudioSource:
@@ -18936,7 +18914,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1430977142}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -18949,7 +18927,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9aebfbf2b718194458b7ad4ec740a879, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19019,18 +18997,17 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1430977142}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: -0.9659258, z: 0, w: 0.2588191}
   m_LocalPosition: {x: 6223.68, y: -280.53, z: 2350.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 938928898}
   - {fileID: 35695687}
   - {fileID: 488763456}
   - {fileID: 12287854}
   - {fileID: 821713566}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -150, z: 0}
 --- !u!114 &1430977152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19073,74 +19050,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1430977142}
   TeleportTo: {fileID: 768181110}
---- !u!1001 &1433567665
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1430977151}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 623270196f671c64793b11a0edcc3d3c, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 623270196f671c64793b11a0edcc3d3c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 623270196f671c64793b11a0edcc3d3c, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 623270196f671c64793b11a0edcc3d3c, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 623270196f671c64793b11a0edcc3d3c, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 623270196f671c64793b11a0edcc3d3c, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 623270196f671c64793b11a0edcc3d3c, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 623270196f671c64793b11a0edcc3d3c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 623270196f671c64793b11a0edcc3d3c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 623270196f671c64793b11a0edcc3d3c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 623270196f671c64793b11a0edcc3d3c, type: 3}
-      propertyPath: m_Name
-      value: diver
-      objectReference: {fileID: 0}
-    - target: {fileID: 5866666021909216657, guid: 623270196f671c64793b11a0edcc3d3c, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: d6a6babc515d8cf428bd9c2fab2db160, type: 2}
-    - target: {fileID: 5866666021909216657, guid: 623270196f671c64793b11a0edcc3d3c, type: 3}
-      propertyPath: m_ApplyRootMotion
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 623270196f671c64793b11a0edcc3d3c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 938928899}
-  m_SourcePrefab: {fileID: 100100000, guid: 623270196f671c64793b11a0edcc3d3c, type: 3}
 --- !u!1 &1435119206
 GameObject:
   m_ObjectHideFlags: 0
@@ -22701,7 +22610,7 @@ MonoBehaviour:
   sensY: 0
   XSlider: {fileID: 1403155672}
   YSlider: {fileID: 1388499067}
-  orientation: {fileID: 1430977151}
+  orientation: {fileID: 488763456}
 --- !u!81 &1713270819
 AudioListener:
   m_ObjectHideFlags: 0
@@ -22743,7 +22652,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 5000
-  field of view: 70
+  field of view: 60
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -25069,7 +24978,7 @@ MonoBehaviour:
   waypoints:
   - {fileID: 548868613}
   - {fileID: 2124057382}
-  playerHealthBar: {fileID: 0}
+  playerHealthBar: {fileID: 383214570}
   hitCooldown: 3
   knockbackCooldown: 1
 --- !u!65 &1867930892
@@ -26115,7 +26024,7 @@ MonoBehaviour:
   waypoints:
   - {fileID: 722026861}
   - {fileID: 1093225438}
-  playerHealthBar: {fileID: 0}
+  playerHealthBar: {fileID: 383214570}
   hitCooldown: 3
   knockbackCooldown: 1
 --- !u!65 &1923251738
